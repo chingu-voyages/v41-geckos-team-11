@@ -1,3 +1,20 @@
+# 👋 HEYY GUYS!
+So I added a prototype of the app to the main view so you can see more or less the communication between pages. Now we have a functioning Single Page Application! 🎆 🍾 I kept it suuuper simple, so first filling a form (name), second picking a template and then the final view. There is a lot to do and as I have done quite a lot today and yesterday I will leave the project for you so you can practice and I will rejoin next week. Things to do:
+
+1. Have a look at the counter component to see how redux is implemented.
+The first page - form. Add CV fields to the form without the logic for now. Add a CSS so the form looks nice. Create a separate CSS file for the main form.
+
+2. Once the form looks good add the logic to the form so we save the details into REDUX store.
+The second page - pick a template. Instead of adding a simple background color how about using a background image? Or use any ideas you might have about the CV template and add it to the CSS instead of the color. Move the CSS to a separate file. Use canva.com for CV template inspiration.
+
+3. The third page: final view! Grab all the details from the redux store form info and display it and add the styling that got pick in a previous step.
+
+HaVe FuN 🎉
+
+Screenshot 2022-10-13 at 16 22 08
+Screenshot 2022-10-13 at 16 22 17
+Screenshot 2022-10-13 at 16 22 26
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
