@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { Counter } from './features/counter/Counter';
+import ResumeBuilder from './features/resume/ResumeBuilder';
+import TemplatePicker from './features/resume/TemplatePicker';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import FinalView from './features/resume/FinalView';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+          <Route exact path="/" element={<ResumeBuilder />} />
+          <Route path="/template" element={<TemplatePicker />} />
+          <Route path="/final" element={<FinalView />} />
+      </Routes>
     </div>
   );
 }
