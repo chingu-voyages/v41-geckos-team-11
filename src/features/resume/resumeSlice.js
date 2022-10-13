@@ -4,14 +4,17 @@ export const resumeSlice = createSlice({
   name: 'resume',
   initialState: {
     name: "",
+    style: ""
   },
   reducers: {
     changeName: (state, action) => {
       state.name = action.payload
     },
+    pickTemplate: (state, action) => {
+      state.style = action.payload   
+    }
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { changeName } = resumeSlice.actions
+export const { changeName, pickTemplate } = resumeSlice.actions
 export default resumeSlice.reducer
