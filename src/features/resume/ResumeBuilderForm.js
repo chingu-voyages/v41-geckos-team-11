@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { changeName } from './resumeSlice'
 
-const ResumeBuilder = () => {
+const ResumeBuilderForm = () => {
     const navigate = useNavigate();
     const passedName = useSelector((state) => state.resume.name)
     const dispatch = useDispatch()
@@ -27,4 +27,4 @@ const ResumeBuilder = () => {
     );
 }
 
-export default ResumeBuilder;
+export default ResumeBuilderForm;

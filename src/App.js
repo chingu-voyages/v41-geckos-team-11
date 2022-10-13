@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Counter } from './features/counter/Counter';
-import ResumeBuilder from './features/resume/ResumeBuilder';
+import ResumeBuilderForm from './features/resume/ResumeBuilderForm';
 import TemplatePicker from './features/resume/TemplatePicker';
 
 import {
@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       <Routes>
-          <Route exact path="/" element={<ResumeBuilder />} />
+          <Route exact path="/" element={<ResumeBuilderForm />} />
           <Route path="/template" element={<TemplatePicker />} />
           <Route path="/final" element={<FinalView />} />
       </Routes>
