@@ -11,9 +11,12 @@ The second page - pick a template. Instead of adding a simple background color h
 
 HaVe FuN 🎉
 
-Screenshot 2022-10-13 at 16 22 08
-Screenshot 2022-10-13 at 16 22 17
-Screenshot 2022-10-13 at 16 22 26
+Development branch has been rename main. To update your local clone follow these steps:
+
+1. git branch -m development main
+2. git fetch origin
+3. git branch -u origin/main main
+4. git remote set-head origin -a
 
 # Getting Started with Create React App
 
