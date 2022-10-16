@@ -10,7 +10,7 @@ const FinalView = () => {
         <div className={pickedTemplate}>
             <h5>CV</h5>
             <div className={pickedTemplate}>
-                This is your name: {passedName} 
+                Name: {passedName} 
             </div>
         </div>    
     )
