@@ -32,6 +32,8 @@ const ResumeBuilder = () => {
 				<input onChange={changeInput} id='firstName' name='firstName' value={formState.firstName} />
 				<label htmlFor='lastName'>Last Name</label>
 				<input onChange={changeInput} id='lastName' name='lastName' value={formState.lastName} />
+				<label htmlFor='phoneNumber'>Phone Number</label>
+				<input onChange={changeInput} id='phoneNumber' value={formState.phoneNumber} />
 			</form>
 			<button onClick={nextPage}>next</button>
 		</div>
