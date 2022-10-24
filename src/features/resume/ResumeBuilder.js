@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFirstName, changeLastName, changeEducation } from './resumeSlice';
+import {
+	changeFirstName,
+	changeLastName,
+	changeProfession,
+	changePhoneNumber,
+	changeEmail,
+	changeSocial,
+	changeSocialLink,
+	changeEducation,
+} from './resumeSlice';
 
 const ResumeBuilder = () => {
 	const [education, setEducation] = useState({
@@ -44,6 +53,42 @@ const ResumeBuilder = () => {
 						id='lastName'
 						name='lastName'
 						value={resumeData.lastName}
+					/>
+					<label htmlFor='profession'>Profession</label>
+					<input
+						onChange={(e) => dispatch(changeProfession(e.target.value))}
+						id='profession'
+						name='profession'
+						value={resumeData.profession}
+					/>
+					<label htmlFor='phoneNumber'>Phone</label>
+					<input
+						onChange={(e) => dispatch(changePhoneNumber(e.target.value))}
+						id='phoneNumber'
+						name='phoneNumber'
+						value={resumeData.phoneNumber}
+					/>
+					<label htmlFor='email'>Email</label>
+					<input
+						onChange={(e) => dispatch(changeEmail(e.target.value))}
+						id='email'
+						name='email'
+						value={resumeData.email}
+						type='email'
+					/>
+					<label htmlFor='social'>Social Website</label>
+					<select onChange={(e) => dispatch(changeSocial(e.target.value))}>
+						<option value='twitter'>Twitter</option>
+						<option value='linkedin'>LinkedIn</option>
+						<option value='instagram'>Instagram</option>
+					</select>
+					<label htmlFor='socialLink'>Link</label>
+					<input
+						onChange={(e) => dispatch(changeSocialLink(e.target.value))}
+						id='socialLink'
+						name='socialLink'
+						value={resumeData.socialLink}
+						type='url'
 					/>
 				</div>
 
