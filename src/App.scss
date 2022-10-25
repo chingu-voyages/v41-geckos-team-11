@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+@mixin position-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.header {
+  text-decoration: grey wavy underline;
+  text-decoration-skip-ink: none;
+  height: 1.5em;
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 35px;
+
+  &__text {
+    font-size: 20px;
+    margin: 0.5rem;
+  }
+
+  &--extra {
+    font-weight: bold;
+  }
+}
+
+.example1 {
+  background: #FEC8D8;
+  width: 400px;
+  height: 200px;
+  display: inline-block;
+  // background-image: url("../src/assets/design1.png");
+  // background-size: cover;
+  // border: 1px solid peachpuff;
+}
+
+.example2 {
+  width: 400px;
+  height: 200px;
+  display: inline-block;
+  background-image: url("../src/assets/design2.png");
+  background-size: cover;
+  border: 1px solid lightblue;
+}
+
+input:last-child {
+  display: block;
+}
+
+.first-template {
+  width: 400px;
+  height: 200px;
+  display: inline-block;
+  background: #FEC8D8;
+}
+
+html {
+  background: lightgray;
+}
+
+
+.second-template {
+  background-image: url("../src/assets/design2.png");
+  height: 1500px;
+  background-repeat: no-repeat;
+  width: 80%;
+  margin: 0 auto;
+
+  &__about {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+
+  &__work {
+    padding-left: 180px;
+    @include position-icons;
+  }
+
+  &__bio {
+    font-size: x-large;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+  }
+
+  &__edu {
+    @include position-icons;
+  }
+
+  &__name {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 55px;
+    padding-top: 110px;
+    font-style: italic;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 35px;
+    font-weight: 900;
+  }
+
+  &__basic {
+    padding-left: 180px;
+    @include position-icons;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

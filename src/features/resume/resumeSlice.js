@@ -9,9 +9,12 @@ export const resumeSlice = createSlice({
 			profession: '',
 			phoneNumber: '',
 			email: '',
-			socialWebsite: 'Twitter',
-			socialWebsiteLink: '',
+			socialWebsite: '',
 			education: [],
+			bio: '',
+			location: '',
+			title: '',
+			phone: '', 
 		},
 		style: '',
 	},
@@ -22,20 +25,29 @@ export const resumeSlice = createSlice({
 		changeLastName: (state, action) => {
 			state.resumeData.lastName = action.payload;
 		},
-		changeProfession: (state, action) => {
-			state.resumeData.profession = action.payload;
-		},
-		changePhoneNumber: (state, action) => {
-			state.resumeData.phoneNumber = action.payload;
+		changePhone: (state, action) => {
+			state.resumeData.phone = action.payload;
 		},
 		changeEmail: (state, action) => {
 			state.resumeData.email = action.payload;
 		},
-		changeSocial: (state, action) => {
+		changeBio: (state, action)=> {
+				state.resumeData.bio = action.payload;
+		},
+		changeLinkedin: (state, action)=> {
+				state.resumeData.linkedin = action.payload;
+		},
+		changeLocation: (state, action)=> {
+				state.resumeData.location = action.payload;
+		},
+		changeWeb: (state, action) => {
 			state.resumeData.socialWebsite = action.payload;
 		},
-		changeSocialLink: (state, action) => {
-			state.resumeData.socialWebsiteLink = action.payload;
+		changeTitle: (state, action) => {
+			state.resumeData.title = action.payload;
+		},
+		changeEmail: (state, action) => {
+			state.resumeData.email = action.payload;
 		},
 		changeEducation: (state, action) => {
 			const { id } = action.payload;
@@ -44,22 +56,12 @@ export const resumeSlice = createSlice({
 				state.resumeData.education.push(action.payload);
 			}
 		},
-
 		pickTemplate: (state, action) => {
 			state.style = action.payload;
 		},
 	},
 });
 
-export const {
-	changeFirstName,
-	changeLastName,
-	changeProfession,
-	changePhoneNumber,
-	changeEmail,
-	changeSocial,
-	changeSocialLink,
-	changeEducation,
-	pickTemplate,
-} = resumeSlice.actions;
+export const { changeFirstName, changeEmail, changeLastName, changeBio, changeEducation, pickTemplate, changeLocation, changeLinkedin , changeWeb, changeTitle, changePhone} =
+	resumeSlice.actions;
 export default resumeSlice.reducer;
