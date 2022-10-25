@@ -10,7 +10,7 @@ library.add( faPhone, faGraduationCap, faBriefcase);
 const FinalView = () => {
 	const resumeData = useSelector((state) => state.resume.resumeData);
 	const pickedTemplate = useSelector((state) => state.resume.style);
-	const { firstName, lastName, email, phone, education, bio, linkedin, location, web, title } = resumeData;
+	const { firstName, lastName, email, phone, education, bio, linkedin, location, socialWeb, title } = resumeData;
 
 	return (
 	<div className="wrapper">
@@ -29,17 +29,17 @@ const FinalView = () => {
 					<h1><FontAwesomeIcon icon={"fa-regular", "phone"} /></h1>
 					<div>
 						<h1 className="header">Contact</h1>
-							<p className="header__text header--extra">
+							<p className="header__text">
 								{phone}
 							</p>
-						<p className="header__text header--extra">
+						<p className="header__text">
 							{location}
 						</p>
-						<p className="header__email">
+						<p className="header__text">
 							{email}
 						</p>
 						<p className="header__text">
-							{web}
+							{socialWeb}
 						</p>
 						<p className="header__text">
 							{linkedin}
@@ -50,16 +50,14 @@ const FinalView = () => {
 					<h1><FontAwesomeIcon icon={"fa-light", "graduation-cap"} /></h1>
 					<div>
 						<h1 className="header">Education</h1>
-						<ul>
-							{education &&
-								education.map((el) => (
-									<li key={el.university}>
-										<p>{el.university}</p>
-										<p>Degree: {el.degree}</p>
-										<p>Course: {el.course}</p>
-									</li>
-								))}
-						</ul>
+						{education &&
+							education.map((el) => (
+								<div>
+									<p className="header__text">{el.university}</p>
+									<p className="header__text">Degree: {el.degree}</p>
+									<p className="header__text">Course: {el.course}</p>
+								</div>
+							))}
 					</div>
 				</div>
 				<div className={`${pickedTemplate}__work`}>

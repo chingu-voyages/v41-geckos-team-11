@@ -9,12 +9,10 @@ export const resumeSlice = createSlice({
 			profession: '',
 			phoneNumber: '',
 			email: '',
-			socialWebsite: 'Twitter',
-			socialWebsiteLink: '',
+			socialWebsite: '',
 			education: [],
 			bio: '',
 			location: '',
-			web: '',
 			title: '',
 			phone: '', 
 		},
@@ -43,7 +41,7 @@ export const resumeSlice = createSlice({
 				state.resumeData.location = action.payload;
 		},
 		changeWeb: (state, action) => {
-			state.resumeData.web = action.payload;
+			state.resumeData.socialWebsite = action.payload;
 		},
 		changeTitle: (state, action) => {
 			state.resumeData.title = action.payload;

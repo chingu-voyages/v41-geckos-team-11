@@ -97,7 +97,7 @@ const ResumeBuilder = () => {
             onChange={e => dispatch(changeWeb(e.target.value))}
             id="web"
             name="web"
-            value={resumeData.web}
+            value={resumeData.socialWeb}
           />
         </div>
 

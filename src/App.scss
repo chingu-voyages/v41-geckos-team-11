@@ -16,6 +16,7 @@
 
   &__text {
     font-size: 20px;
+    margin: 0.5rem;
   }
 
   &--extra {
@@ -97,8 +98,8 @@ html {
   &__title {
     text-align: center;
     text-transform: capitalize;
-    font-size: 30px;
-    font-style: italic;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 35px;
     font-weight: 900;
   }
 
