@@ -6,6 +6,7 @@ import {
   changeLastName,
   changeEducation,
   changeBio,
+  changeEmail,
   changeLocation,
   changeWeb,
   changeLinkedin,
@@ -75,6 +76,13 @@ const ResumeBuilder = () => {
             id="location"
             name="location"
             value={resumeData.location}
+          />
+		  <label htmlFor="linkedin">Email</label>
+          <input
+            onChange={e => dispatch(changeEmail(e.target.value))}
+            id="email"
+            name="email"
+            value={resumeData.email}
           />
           <label htmlFor="linkedin">Linkedin</label>
           <input

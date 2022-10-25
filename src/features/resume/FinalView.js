@@ -10,7 +10,7 @@ library.add( faPhone, faGraduationCap, faBriefcase);
 const FinalView = () => {
 	const resumeData = useSelector((state) => state.resume.resumeData);
 	const pickedTemplate = useSelector((state) => state.resume.style);
-	const { firstName, lastName, phone, education, bio, linkedin, location, web, title } = resumeData;
+	const { firstName, lastName, email, phone, education, bio, linkedin, location, web, title } = resumeData;
 
 	return (
 	<div className="wrapper">
@@ -34,6 +34,9 @@ const FinalView = () => {
 							</p>
 						<p className="header__text header--extra">
 							{location}
+						</p>
+						<p className="header__email">
+							{email}
 						</p>
 						<p className="header__text">
 							{web}
