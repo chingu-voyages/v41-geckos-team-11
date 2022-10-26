@@ -12,6 +12,7 @@ export const resumeSlice = createSlice({
 			socialWebsite: '',
 			education: [],
 			bio: '',
+			linkedin: '',
 			location: '',
 			title: '',
 			phone: '',
