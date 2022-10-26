@@ -6,17 +6,16 @@ export const resumeSlice = createSlice({
 		resumeData: {
 			firstName: '',
 			lastName: '',
-			profession: '',
-			phoneNumber: '',
 			email: '',
 			socialWebsite: '',
 			education: [],
 			bio: '',
+			linkedin: '',
 			location: '',
 			title: '',
-			phone: '', 
+			phone: '',
 		},
-		style: '',
+		template: '',
 	},
 	reducers: {
 		changeFirstName: (state, action) => {
@@ -31,23 +30,20 @@ export const resumeSlice = createSlice({
 		changeEmail: (state, action) => {
 			state.resumeData.email = action.payload;
 		},
-		changeBio: (state, action)=> {
-				state.resumeData.bio = action.payload;
+		changeBio: (state, action) => {
+			state.resumeData.bio = action.payload;
 		},
-		changeLinkedin: (state, action)=> {
-				state.resumeData.linkedin = action.payload;
+		changeLinkedin: (state, action) => {
+			state.resumeData.linkedin = action.payload;
 		},
-		changeLocation: (state, action)=> {
-				state.resumeData.location = action.payload;
+		changeLocation: (state, action) => {
+			state.resumeData.location = action.payload;
 		},
 		changeWeb: (state, action) => {
 			state.resumeData.socialWebsite = action.payload;
 		},
 		changeTitle: (state, action) => {
 			state.resumeData.title = action.payload;
-		},
-		changeEmail: (state, action) => {
-			state.resumeData.email = action.payload;
 		},
 		changeEducation: (state, action) => {
 			const { id } = action.payload;
@@ -57,11 +53,22 @@ export const resumeSlice = createSlice({
 			}
 		},
 		pickTemplate: (state, action) => {
-			state.style = action.payload;
+			state.template = action.payload;
 		},
 	},
 });
 
-export const { changeFirstName, changeEmail, changeLastName, changeBio, changeEducation, pickTemplate, changeLocation, changeLinkedin , changeWeb, changeTitle, changePhone} =
-	resumeSlice.actions;
+export const {
+	changeFirstName,
+	changeEmail,
+	changeLastName,
+	changeBio,
+	changeEducation,
+	pickTemplate,
+	changeLocation,
+	changeLinkedin,
+	changeWeb,
+	changeTitle,
+	changePhone,
+} = resumeSlice.actions;
 export default resumeSlice.reducer;
