@@ -6,8 +6,6 @@ export const resumeSlice = createSlice({
 		resumeData: {
 			firstName: '',
 			lastName: '',
-			profession: '',
-			phoneNumber: '',
 			email: '',
 			socialWebsite: '',
 			education: [],
