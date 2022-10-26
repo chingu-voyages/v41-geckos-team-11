@@ -16,7 +16,7 @@ export const resumeSlice = createSlice({
 			title: '',
 			phone: '',
 		},
-		style: '',
+		template: '',
 	},
 	reducers: {
 		changeFirstName: (state, action) => {
@@ -54,7 +54,7 @@ export const resumeSlice = createSlice({
 			}
 		},
 		pickTemplate: (state, action) => {
-			state.style = action.payload;
+			state.template = action.payload;
 		},
 	},
 });
