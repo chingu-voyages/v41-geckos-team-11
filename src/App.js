@@ -1,6 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
-import { Counter } from './features/counter/Counter';
+import './App.scss';
 import ResumeBuilder from './features/resume/ResumeBuilder';
 import TemplatePicker from './features/resume/TemplatePicker';
 
