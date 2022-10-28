@@ -45,6 +45,11 @@ const ResumeBuilder = () => {
           <Input text="title" name="title" />
           <Input text="location" name="location" />
           <Input text="website" name="website" />
+          <textarea
+            onChange={e => dispatch(changeBio(e.target.value))}
+            width="200"
+            height="200"
+          />
         </div>
 
         {/* Education */}
@@ -59,11 +64,6 @@ const ResumeBuilder = () => {
           <input onChange={handleEducationChange} id="degree" name="degree" />
           <label htmlFor="course">Course</label>
           <input onChange={handleEducationChange} id="course" name="course" />
-          <textarea
-            onChange={e => dispatch(changeBio(e.target.value))}
-            width="200"
-            height="200"
-          />
         </div>
       </form>
       <button onClick={nextPage}>next</button>
