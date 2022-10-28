@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import DatePicker from "react-datepicker";
+import Input from "../../components/Input";
+
 import {
-  changeFirstName,
-  changeLastName,
   changeEducation,
-  changeBio,
-  changeEmail,
-  changeLocation,
-  changeWeb,
-  changeLinkedin,
-  changeTitle,
-  changePhone
+  changeBio
 } from "./resumeSlice";
 
 const ResumeBuilder = () => {
+
   const [education, setEducation] = useState({
     id: "",
     university: "",
@@ -24,7 +20,6 @@ const ResumeBuilder = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const resumeData = useSelector(state => state.resume.resumeData);
 
   const handleEducationChange = e => {
     const name = e.target.name;
@@ -42,63 +37,14 @@ const ResumeBuilder = () => {
       <form>
         {/* Personal details */}
         <div>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            onChange={e => dispatch(changeFirstName(e.target.value))}
-            id="firstName"
-            name="firstName"
-            value={resumeData.firstName}
-          />
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            onChange={e => dispatch(changeLastName(e.target.value))}
-            id="lastName"
-            name="lastName"
-            value={resumeData.lastName}
-          />
-          <label htmlFor="phone">Phone</label>
-          <input
-            onChange={e => dispatch(changePhone(e.target.value))}
-            id="phone"
-            name="phone"
-            value={resumeData.phone}
-          />
-          <label htmlFor="website">Job title</label>
-          <input
-            onChange={e => dispatch(changeTitle(e.target.value))}
-            id="title"
-            name="title"
-            value={resumeData.title}
-          />
-          <label htmlFor="location">Location</label>
-          <input
-            onChange={e => dispatch(changeLocation(e.target.value))}
-            id="location"
-            name="location"
-            value={resumeData.location}
-          />
-		  <label htmlFor="linkedin">Email</label>
-          <input
-            onChange={e => dispatch(changeEmail(e.target.value))}
-            id="email"
-            name="email"
-            value={resumeData.email}
-          />
-          <label htmlFor="linkedin">Linkedin</label>
-          <input
-            onChange={e => dispatch(changeLinkedin(e.target.value))}
-            id="linkedin"
-            name="linkedin"
-            value={resumeData.linkedin}
-          />
-
-          <label htmlFor="website">Website</label>
-          <input
-            onChange={e => dispatch(changeWeb(e.target.value))}
-            id="web"
-            name="web"
-            value={resumeData.socialWeb}
-          />
+          <Input text="First name" name="firstName" />
+          <Input text="Last name" name="lastName" />
+          <Input text="Phone" name="phone" />
+          <Input text="email" name="email" />
+          <Input text="linkedin" name="linkedin" />
+          <Input text="title" name="title" />
+          <Input text="location" name="location" />
+          <Input text="website" name="website" />
         </div>
 
         {/* Education */}
