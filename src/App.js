@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+// import './styles/theme.scss';
+// import './styles/header.scss';
 import './App.scss';
 import ResumeBuilder from './features/resume/ResumeBuilder';
 import TemplatePicker from './features/resume/TemplatePicker';
+import Header from './components/Header'
 
 import {
   BrowserRouter as Router,
@@ -13,13 +15,18 @@ import FinalView from './features/resume/FinalView';
 
 function App() {
   return (
-    <div>
-      <Routes>
-          <Route exact path="/" element={<ResumeBuilder />} />
-          <Route path="/template" element={<TemplatePicker />} />
-          <Route path="/final" element={<FinalView />} />
-      </Routes>
-    </div>
+    <>
+      <Header />
+      <main>
+        <section>
+          <Routes>
+            <Route exact path="/" element={<ResumeBuilder />} />
+            <Route path="/template" element={<TemplatePicker />} />
+            <Route path="/final" element={<FinalView />} />
+          </Routes>
+        </section>
+      </main>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Fragment } from 'react';
 import { pickTemplate } from './resumeSlice'
 import '../../App.css';
@@ -12,6 +12,9 @@ const TemplatePicker = () => {
     const nextPage = () => {
         navigate('/final');
     };
+    const prevPage = () => {
+        navigate('/')
+    }
 
     const selectTemplate = (e) => {
         dispatch(pickTemplate(e.target.value))
@@ -21,12 +24,15 @@ const TemplatePicker = () => {
         <Fragment>
             <div>Hey, {passedName} pick a template</div>
             <form>
-              <input onChange={selectTemplate} type="radio" id="first-template" name="templatepick" value="first-template" />
-              <label htmlFor="first-template" className="example1"></label>
-              <input onChange={selectTemplate} type="radio" id="second-template" name="templatepick" value="second-template" />
-              <label htmlFor="second-template" className="example2"></label>
+                <input onChange={selectTemplate} type="radio" id="first-template" name="templatepick" value="first-template" />
+                <label htmlFor="first-template" className="example1"></label>
+                <input onChange={selectTemplate} type="radio" id="second-template" name="templatepick" value="second-template" />
+                <label htmlFor="second-template" className="example2"></label>
             </form>
-            <button onClick={nextPage}>Next</button>
+            <div className="buttons flex justify-between align-center">
+                <button onClick={prevPage}>Back</button>
+                <button className="next" onClick={nextPage}>Next</button>
+            </div>
         </Fragment>
     )
 }
