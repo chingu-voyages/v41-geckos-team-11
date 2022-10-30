@@ -18,32 +18,8 @@ export const resumeSlice = createSlice({
 		template: '',
 	},
 	reducers: {
-		changeFirstName: (state, action) => {
-			state.resumeData.firstName = action.payload;
-		},
-		changeLastName: (state, action) => {
-			state.resumeData.lastName = action.payload;
-		},
-		changePhone: (state, action) => {
-			state.resumeData.phone = action.payload;
-		},
-		changeEmail: (state, action) => {
-			state.resumeData.email = action.payload;
-		},
 		changeBio: (state, action) => {
 			state.resumeData.bio = action.payload;
-		},
-		changeLinkedin: (state, action) => {
-			state.resumeData.linkedin = action.payload;
-		},
-		changeLocation: (state, action) => {
-			state.resumeData.location = action.payload;
-		},
-		changeWeb: (state, action) => {
-			state.resumeData.socialWebsite = action.payload;
-		},
-		changeTitle: (state, action) => {
-			state.resumeData.title = action.payload;
 		},
 		changeEducation: (state, action) => {
 			const { id } = action.payload;
@@ -55,20 +31,16 @@ export const resumeSlice = createSlice({
 		pickTemplate: (state, action) => {
 			state.template = action.payload;
 		},
+		setResume: (state, action) => {
+			state.resumeData[action.payload.name] = action.payload.inputVal
+		}
 	},
 });
 
 export const {
-	changeFirstName,
-	changeEmail,
-	changeLastName,
 	changeBio,
 	changeEducation,
 	pickTemplate,
-	changeLocation,
-	changeLinkedin,
-	changeWeb,
-	changeTitle,
-	changePhone,
+	setResume
 } = resumeSlice.actions;
 export default resumeSlice.reducer;
