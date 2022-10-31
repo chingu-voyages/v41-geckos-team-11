@@ -78,13 +78,12 @@ const TemplateTwo = ({ resumeData }) => {
           </h1>
           <div>
             <h1 className="header">Work Experience</h1>
-            <ul>
-              <li className="header__list">{company}
+            <div>
+              <p className="header__text">{company}</p>
               <p className="header__text">{modifyDate(startWorkDate1)} - {modifyDate(endWorkDate1)}</p>
               <p className="header__text">{jobTitle1}</p>
               <p className="header__text">{workDescription1}</p>
-              </li>
-            </ul>      
+            </div>      
           </div>
         </div>
       </div>
