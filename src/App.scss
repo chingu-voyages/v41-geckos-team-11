@@ -30,13 +30,22 @@ section{
 }
 
 .input-block input,
-.input-block select{
+.input-block select,
+.input-block textarea{
     /* width: 100%; */
     border-radius: 0;
     border: 1px solid $secondary-light;
     padding: 1rem 1rem;
     margin-block: .5rem;
     background-color: transparent;
+	width: 100%;
+}
+
+.input-block textarea{
+	resize: none;
+	height: 200px;
+}
+.bio{
 	width: 100%;
 }
 
