@@ -1,14 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
-@import "~react-datepicker/dist/react-datepicker.css";
+@import './styles/theme';
+@import './styles/prestyles';
+@import './styles/header';
+
+// @import "~react-datepicker/dist/react-datepicker.css";
 
 @mixin position-icons {
 	display: flex;
 	gap: 20px;
 }
 
+
 html {
-	background: lightgray;
+	background: $bg-color;
+}
+
+section{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	padding: 6rem 1rem;
+}
+
+
+.input-block{
+    width: 48%;
+    padding-block: 1rem;
+}
+
+.input-block input,
+.input-block select,
+.input-block textarea{
+    /* width: 100%; */
+    border-radius: 0;
+    border: 1px solid $secondary-light;
+    padding: 1rem 1rem;
+    margin-block: .5rem;
+    background-color: transparent;
+	width: 100%;
+}
+
+.input-block textarea{
+	resize: none;
+	height: 200px;
+}
+.bio{
+	width: 100%;
+}
+
+.buttons{
+    padding-block: 2rem;
+}
+.buttons button{
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: 2px solid $blue;
+    color: $blue;
+    font-size: 1.6rem;
+    transition: all .3s;
+}
+.buttons button:hover{
+    background-color: $baby-blue;
+    /* color: $bg-color); */
+}
+.buttons button.next{
+    border: 2px solid $primary-main;
+    background-color: $primary-main;
+    box-shadow: 0px 0px 5px -2px $secondary-semilight;
+    color: $bg-color;
+}
+.buttons button.next:hover{
+    background-color: $primary-semidark;
 }
 
 .example1 {
@@ -168,5 +232,14 @@ input:last-child {
 	&__section {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1700px){
+	:root{
+		font-size: 80%;
+	}
+	section{
+		max-width: 1200px;
 	}
 }
