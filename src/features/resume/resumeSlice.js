@@ -23,9 +23,6 @@ export const resumeSlice = createSlice({
 		template: '',
 	},
 	reducers: {
-		changeBio: (state, action) => {
-			state.resumeData.bio = action.payload;
-		},
 		changeEducation: (state, action) => {
 			const { id } = action.payload;
 			const educationFound = state.resumeData.education.find((education) => education.id === id);
@@ -37,14 +34,12 @@ export const resumeSlice = createSlice({
 			state.template = action.payload;
 		},
 		setResume: (state, action) => {
-			console.log(state)
 			state.resumeData[action.payload.name] = action.payload.inputVal
 		}
 	},
 });
 
 export const {
-	changeBio,
 	changeEducation,
 	pickTemplate,
 	setResume
