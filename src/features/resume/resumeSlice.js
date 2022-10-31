@@ -14,6 +14,11 @@ export const resumeSlice = createSlice({
 			location: '',
 			title: '',
 			phone: '',
+			company: '',
+			startWorkDate1: '', 
+			endWorkDate1: '',
+			jobTitle1: '',
+			workDescription1: ''
 		},
 		template: '',
 	},
@@ -32,6 +37,7 @@ export const resumeSlice = createSlice({
 			state.template = action.payload;
 		},
 		setResume: (state, action) => {
+			console.log(state)
 			state.resumeData[action.payload.name] = action.payload.inputVal
 		}
 	},

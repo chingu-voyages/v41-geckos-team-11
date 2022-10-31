@@ -169,4 +169,20 @@ input:last-child {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	  }
+	  
+	  li {
+		padding-left: 1em; 
+		text-indent: -.7em;
+	  }
+
+	li::before {
+		content: "• ";
+		color: blue; /* or whatever color you prefer */
+	}
 }
