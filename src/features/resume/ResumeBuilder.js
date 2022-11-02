@@ -3,41 +3,21 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import TextArea from "../../components/TextArea";
 import Input from "../../components/Input";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 
 import {
-  faPlus,
-} from "@fortawesome/free-solid-svg-icons";
-
-import {
-  changeEducation,
-  changeProgressBar
+  changeProgressBar,
+  changeBio
 } from "./resumeSlice";
-library.add(faPlus);
 
 
 const ResumeBuilder = () => {
-  const [education, setEducation] = useState({
-    id: "",
-    university: "",
-    degree: "",
-    course: ""
-  });
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleEducationChange = e => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setEducation({ ...education, id: Math.random().toString(), [name]: value });
-  };
-
   const nextPage = () => {
-    dispatch(changeEducation({ ...education }));
-    dispatch(changeProgressBar(50))
-    navigate("/template");
+    dispatch(changeProgressBar(40))
+    navigate("/education");
   };
 
   return (
@@ -84,60 +64,11 @@ const ResumeBuilder = () => {
               <TextArea name="bio" />
               </div>
           </div>
-          <div className="row flex align-center justify-between full-width">
-            <div className="input-block">
-              <Input text="Company" name="company" />
-            </div>
-            <div className="input-block">
-              <Input text="Job Title" name="jobTitle1" />
-            </div>  
-          </div>  
-          <div className="row flex align-center justify-between full-width">
-            <div className="input-block">
-              <Input text="Start Date" type="month" name="startWorkDate1" />
-            </div>
-            <div className="input-block">  
-              <Input text="End Date" type="month" name="endWorkDate1" />
-            </div>
-          </div>  
-            <div className="row flex align-center justify-between full-width">
-            <label>Work experience 1</label>
-            <div className="input-block bio">
-              <TextArea name="workDescription1" />
-            </div>  
-          </div>
-          <FontAwesomeIcon icon={("fa-solid", "fa-plus")} />
         </div>
 
-        {/* Education */}
-        <div>
-          <h2>Education</h2>
-          <div className="content">
-            <div className="row flex align-center justify-between full-width">
-              <div className="input-block">
-                <label htmlFor="university">University</label>
-                <input
-                  onChange={handleEducationChange}
-                  id="university"
-                  name="university"
-                />
-              </div>
-            </div>
-            <div className="row flex align-center justify-between full-width">
-              <div className="input-block">
-                <label htmlFor="degree">Degree</label>
-                <input onChange={handleEducationChange} id="degree" name="degree" />
-              </div>
-              <div className="input-block">
-                <label htmlFor="course">Course</label>
-                <input onChange={handleEducationChange} id="course" name="course" />
-              </div>
-            </div>
-          </div>
-        </div>
       </form>
       <div className="buttons flex justify-end align-center">
-        <button className="next" onClick={nextPage}>Next</button>
+        <button className="next" onClick={nextPage}>Next: Education</button>
       </div>
     </div>
   );

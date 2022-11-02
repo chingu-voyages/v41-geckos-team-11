@@ -11,11 +11,11 @@ const TemplatePicker = () => {
 
     const nextPage = () => {
         navigate('/final');
-        dispatch(changeProgressBar(75))
+        dispatch(changeProgressBar(100))
     };
     const prevPage = () => {
-        navigate('/')
-        dispatch(changeProgressBar(25))
+        navigate('/work-history')
+        dispatch(changeProgressBar(60))
     }
 
     const selectTemplate = (e) => {
@@ -33,7 +33,7 @@ const TemplatePicker = () => {
             </form>
             <div className="buttons flex justify-between align-center">
                 <button onClick={prevPage}>Back</button>
-                <button className="next" onClick={nextPage}>Next</button>
+                <button className="next" onClick={nextPage}>Next: View Resume</button>
             </div>
         </Fragment>
     )
