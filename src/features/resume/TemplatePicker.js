@@ -11,11 +11,11 @@ const TemplatePicker = () => {
 
     const nextPage = () => {
         navigate('/final');
-        dispatch(changeProgressBar(75))
+        dispatch(changeProgressBar(100))
     };
     const prevPage = () => {
         navigate('/work-history')
-        dispatch(changeProgressBar(25))
+        dispatch(changeProgressBar(60))
     }
 
     const selectTemplate = (e) => {

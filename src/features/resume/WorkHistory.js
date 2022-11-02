@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import TextArea from "../../components/TextArea";
 import Input from "../../components/Input";
 
+import {
+    changeProgressBar
+} from "./resumeSlice";
 
 const WorkHistory = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const nextPage = () => {
+        dispatch(changeProgressBar(80))
         navigate("/template");
     };
     const prevPage = () => {
+        dispatch(changeProgressBar(40))
         navigate('/education')
     }
     return (

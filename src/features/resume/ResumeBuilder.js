@@ -27,7 +27,7 @@ const ResumeBuilder = () => {
   // };
 
   const nextPage = () => {
-    dispatch(changeProgressBar(50))
+    dispatch(changeProgressBar(40))
     // dispatch(changeEducation({ ...education }));
     navigate("/education");
   };

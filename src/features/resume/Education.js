@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 // import Input from "../../components/Input";
 
 import {
+    changeProgressBar,
     changeEducation
 } from "./resumeSlice";
 
@@ -27,10 +28,12 @@ function Education() {
     };
 
     const nextPage = () => {
+        dispatch(changeProgressBar(60))
         dispatch(changeEducation({ ...education }));
         navigate("/work-history");
     };
     const prevPage = () => {
+        dispatch(changeProgressBar(20))
         navigate('/')
     }
 

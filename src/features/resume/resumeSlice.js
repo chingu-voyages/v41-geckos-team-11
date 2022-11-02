@@ -19,7 +19,7 @@ export const resumeSlice = createSlice({
 			endWorkDate1: '',
 			jobTitle1: '',
 			workDescription1: '',
-			progressBar: 25
+			progressBar: 20
 		},
 		template: '',
 	},
