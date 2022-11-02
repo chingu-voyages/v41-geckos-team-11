@@ -13,7 +13,7 @@ const TemplatePicker = () => {
         navigate('/final');
     };
     const prevPage = () => {
-        navigate('/')
+        navigate('/education')
     }
 
     const selectTemplate = (e) => {
