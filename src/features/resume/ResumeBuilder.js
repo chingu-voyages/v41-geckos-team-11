@@ -6,7 +6,7 @@ import Input from "../../components/Input";
 
 import {
   changeEducation,
-  changeBio
+  changeProgressBar
 } from "./resumeSlice";
 
 const ResumeBuilder = () => {
@@ -28,6 +28,7 @@ const ResumeBuilder = () => {
 
   const nextPage = () => {
     dispatch(changeEducation({ ...education }));
+    dispatch(changeProgressBar(50))
     navigate("/template");
   };
 

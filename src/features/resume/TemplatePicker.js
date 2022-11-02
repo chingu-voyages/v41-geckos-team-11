@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { Fragment } from 'react';
-import { pickTemplate } from './resumeSlice'
+import { pickTemplate, changeProgressBar } from './resumeSlice'
 import '../../App.css';
 
 const TemplatePicker = () => {
@@ -11,9 +11,11 @@ const TemplatePicker = () => {
 
     const nextPage = () => {
         navigate('/final');
+        dispatch(changeProgressBar(75))
     };
     const prevPage = () => {
         navigate('/')
+        dispatch(changeProgressBar(25))
     }
 
     const selectTemplate = (e) => {
