@@ -95,7 +95,7 @@ const ResumeBuilder = () => {
 
       </form>
       <div className="buttons flex justify-end align-center">
-        <button className="next" onClick={nextPage}>Next</button>
+        <button className="next" onClick={nextPage}>Next: Education</button>
       </div>
     </div>
   );
