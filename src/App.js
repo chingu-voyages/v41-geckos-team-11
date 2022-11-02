@@ -3,6 +3,7 @@
 import './App.scss';
 import ResumeBuilder from './features/resume/ResumeBuilder';
 import Education from './features/resume/Education';
+import WorkHistory from './features/resume/WorkHistory';
 import TemplatePicker from './features/resume/TemplatePicker';
 import Header from './components/Header'
 
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<ResumeBuilder />} />
             <Route exact path="/education" element={<Education />} />
+            <Route exact path="/work-history" element={<WorkHistory />} />
             <Route path="/template" element={<TemplatePicker />} />
             <Route path="/final" element={<FinalView />} />
           </Routes>
