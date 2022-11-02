@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-// import DatePicker from "react-datepicker";
+import TextArea from "../../components/TextArea";
 import Input from "../../components/Input";
 
 import {
@@ -9,7 +9,6 @@ import {
 } from "./resumeSlice";
 
 const ResumeBuilder = () => {
-
   // const [education, setEducation] = useState({
   //   id: "",
   //   university: "",
@@ -72,11 +71,25 @@ const ResumeBuilder = () => {
           <div className="row flex justify-between align-center full-width">
             <div className="input-block bio">
               <label>Bio</label>
-              <textarea
-                onChange={e => dispatch(changeBio(e.target.value))}
-                width="200"
-                height="200"
-              /></div>
+              <TextArea name="bio" />
+              </div>
+          </div>
+          <div className="row flex justify-between align-center full-width">
+            <div className="input-block">
+              <Input text="Company" name="company" />
+            </div>
+            <div className="input-block">
+              <Input text="Start Date" type="month" name="startWorkDate1" />
+            </div>
+            <div className="input-block">  
+              <Input text="End Date" type="month" name="endWorkDate1" />
+            </div>
+            <div className="input-block">
+              <TextArea name="workDescription1" />
+            </div>  
+            <div className="input-block">
+              <Input text="Job Title" name="jobTitle1" />
+            </div>  
           </div>
         </div>
 

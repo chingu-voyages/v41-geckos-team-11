@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setResume } from "../features/resume/resumeSlice";
 
 const Input = (props) => {
-    const {name, text} = props;
+    const {name, text, type="text", placeholder=""} = props;
     const [inputVal, setInputVal] = useState('')
     const dispatch = useDispatch();
 
@@ -22,6 +22,8 @@ const Input = (props) => {
           id={name}
           name={name}
           value={inputVal}
+          type={type}
+          placeholder={placeholder}
         />
       </Fragment>
     );
