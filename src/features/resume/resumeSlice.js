@@ -18,7 +18,8 @@ export const resumeSlice = createSlice({
 			startWorkDate1: '', 
 			endWorkDate1: '',
 			jobTitle1: '',
-			workDescription1: ''
+			workDescription1: '',
+			progressBar: 25
 		},
 		template: '',
 	},
@@ -35,6 +36,9 @@ export const resumeSlice = createSlice({
 		},
 		setResume: (state, action) => {
 			state.resumeData[action.payload.name] = action.payload.inputVal
+		}, 
+		changeProgressBar: (state, action) => {
+			state.resumeData.progressBar = action.payload
 		}
 	},
 });
@@ -42,6 +46,7 @@ export const resumeSlice = createSlice({
 export const {
 	changeEducation,
 	pickTemplate,
-	setResume
+	setResume,
+	changeProgressBar
 } = resumeSlice.actions;
 export default resumeSlice.reducer;
