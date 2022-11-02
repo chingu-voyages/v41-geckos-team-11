@@ -19,8 +19,19 @@ const TemplateTwo = ({ resumeData }) => {
     location,
     title,
     phone,
-    socialWeb
+    socialWeb, 
+    company, 
+    startWorkDate1, 
+    endWorkDate1, 
+    workDescription1,
+    jobTitle1
   } = resumeData;
+
+  const modifyDate = (date) => {
+    const newArr = date.split("-");
+    [newArr[0], newArr[1]] = [newArr[1], newArr[0]];
+    return newArr.join("/");
+  }
 
   return (
     <div className="second-template">
@@ -67,6 +78,12 @@ const TemplateTwo = ({ resumeData }) => {
           </h1>
           <div>
             <h1 className="header">Work Experience</h1>
+            <div>
+              <p className="header__text">{company}</p>
+              <p className="header__text">{modifyDate(startWorkDate1)} - {modifyDate(endWorkDate1)}</p>
+              <p className="header__text">{jobTitle1}</p>
+              <p className="header__text">{workDescription1}</p>
+            </div>      
           </div>
         </div>
       </div>

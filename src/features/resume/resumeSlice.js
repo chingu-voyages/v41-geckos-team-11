@@ -14,13 +14,15 @@ export const resumeSlice = createSlice({
 			location: '',
 			title: '',
 			phone: '',
+			company: '',
+			startWorkDate1: '', 
+			endWorkDate1: '',
+			jobTitle1: '',
+			workDescription1: ''
 		},
 		template: '',
 	},
 	reducers: {
-		changeBio: (state, action) => {
-			state.resumeData.bio = action.payload;
-		},
 		changeEducation: (state, action) => {
 			const { id } = action.payload;
 			const educationFound = state.resumeData.education.find((education) => education.id === id);
@@ -38,7 +40,6 @@ export const resumeSlice = createSlice({
 });
 
 export const {
-	changeBio,
 	changeEducation,
 	pickTemplate,
 	setResume
