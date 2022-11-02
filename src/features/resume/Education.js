@@ -28,7 +28,7 @@ function Education() {
 
     const nextPage = () => {
         dispatch(changeEducation({ ...education }));
-        navigate("/template");
+        navigate("/work-history");
     };
     const prevPage = () => {
         navigate('/')

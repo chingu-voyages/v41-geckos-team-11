@@ -13,7 +13,7 @@ const TemplatePicker = () => {
         navigate('/final');
     };
     const prevPage = () => {
-        navigate('/education')
+        navigate('/work-history')
     }
 
     const selectTemplate = (e) => {
