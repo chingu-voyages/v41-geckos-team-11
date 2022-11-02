@@ -3,11 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import TextArea from "../../components/TextArea";
 import Input from "../../components/Input";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+import {
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 
 import {
   changeEducation,
   changeProgressBar
 } from "./resumeSlice";
+library.add(faPlus);
+
 
 const ResumeBuilder = () => {
   const [education, setEducation] = useState({
@@ -76,23 +84,29 @@ const ResumeBuilder = () => {
               <TextArea name="bio" />
               </div>
           </div>
-          <div className="row flex justify-between align-center full-width">
+          <div className="row flex align-center justify-between full-width">
             <div className="input-block">
               <Input text="Company" name="company" />
             </div>
+            <div className="input-block">
+              <Input text="Job Title" name="jobTitle1" />
+            </div>  
+          </div>  
+          <div className="row flex align-center justify-between full-width">
             <div className="input-block">
               <Input text="Start Date" type="month" name="startWorkDate1" />
             </div>
             <div className="input-block">  
               <Input text="End Date" type="month" name="endWorkDate1" />
             </div>
-            <div className="input-block">
+          </div>  
+            <div className="row flex align-center justify-between full-width">
+            <label>Work experience 1</label>
+            <div className="input-block bio">
               <TextArea name="workDescription1" />
             </div>  
-            <div className="input-block">
-              <Input text="Job Title" name="jobTitle1" />
-            </div>  
           </div>
+          <FontAwesomeIcon icon={("fa-solid", "fa-plus")} />
         </div>
 
         {/* Education */}
