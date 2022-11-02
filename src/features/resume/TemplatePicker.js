@@ -14,8 +14,8 @@ const TemplatePicker = () => {
         dispatch(changeProgressBar(75))
     };
     const prevPage = () => {
-        navigate('/')
         dispatch(changeProgressBar(25))
+        navigate('/education')
     }
 
     const selectTemplate = (e) => {
