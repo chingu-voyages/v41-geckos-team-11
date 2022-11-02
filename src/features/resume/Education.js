@@ -66,7 +66,7 @@ function Education() {
             </form>
             <div className="buttons flex justify-between align-center">
                 <button onClick={prevPage}>Back</button>
-                <button className="next" onClick={nextPage}>Next</button>
+                <button className="next" onClick={nextPage}>Next: Work History</button>
             </div>
         </div>
     )

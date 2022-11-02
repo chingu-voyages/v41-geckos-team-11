@@ -43,7 +43,7 @@ const WorkHistory = () => {
             </form>
             <div className="buttons flex justify-between align-center">
                 <button onClick={prevPage}>Back</button>
-                <button className="next" onClick={nextPage}>Next</button>
+                <button className="next" onClick={nextPage}>Next: Select Template</button>
             </div>
 
         </div>
