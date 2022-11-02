@@ -5,6 +5,7 @@ import TextArea from "../../components/TextArea";
 import Input from "../../components/Input";
 
 import {
+  changeProgressBar,
   changeBio
 } from "./resumeSlice";
 
@@ -26,6 +27,7 @@ const ResumeBuilder = () => {
   // };
 
   const nextPage = () => {
+    dispatch(changeProgressBar(50))
     // dispatch(changeEducation({ ...education }));
     navigate("/education");
   };
