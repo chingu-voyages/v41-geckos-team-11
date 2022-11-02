@@ -166,9 +166,9 @@ input:last-child {
 .second-template {
 	
 	display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
 
 	&__wrapper {
 		background-image: url('../src/assets/design2.png');
