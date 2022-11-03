@@ -9,26 +9,14 @@ import {
   changeBio
 } from "./resumeSlice";
 
+
 const ResumeBuilder = () => {
-  // const [education, setEducation] = useState({
-  //   id: "",
-  //   university: "",
-  //   degree: "",
-  //   course: ""
-  // });
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // const handleEducationChange = e => {
-  //   const name = e.target.name;
-  //   const value = e.target.value;
-  //   setEducation({ ...education, id: Math.random().toString(), [name]: value });
-  // };
-
   const nextPage = () => {
     dispatch(changeProgressBar(40))
-    // dispatch(changeEducation({ ...education }));
     navigate("/education");
   };
 
@@ -74,7 +62,7 @@ const ResumeBuilder = () => {
             <div className="input-block bio">
               <label>Bio</label>
               <TextArea name="bio" />
-            </div>
+              </div>
           </div>
         </div>
 
