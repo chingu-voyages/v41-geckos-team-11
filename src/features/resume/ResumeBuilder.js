@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import TextArea from "../../components/TextArea";
 import Input from "../../components/Input";
+import Skills from "../../components/Skills";
 
 import {
   changeProgressBar,
@@ -11,7 +12,26 @@ import {
 
 
 const ResumeBuilder = () => {
+  const [skills, setSkills] = useState([
+  ])
+  const [text, setText] = useState('')
 
+
+  const setSkill = () => {
+    addSkill(text)
+    setText('')
+  }
+  // Add Skill
+  const addSkill = (text) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newSkill = { id, text }
+    setSkills([...skills, newSkill])
+  }
+
+  //Delete Task
+  const deleteSkill = (id) => {
+    setSkills(skills.filter((skill) => skill.id !== id))
+  }
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -63,6 +83,27 @@ const ResumeBuilder = () => {
               <label>Bio</label>
               <TextArea name="bio" />
               </div>
+          </div>
+          <div className="row flex justify-center align-center full-width skill-input">
+            <div className="input-block">
+              <input
+                type="text"
+                name="skills"
+                placeholder="Input Skills"
+                onChange={(e) => setText(e.target.value)}
+              />
+            </div>
+            <div className="input-block">
+              <input
+                type="button"
+                value="Add"
+                onClick={setSkill}
+              />
+            </div>
+          </div>
+          <h2>Skills</h2>
+          <div className="row flex align-center full-width skills">
+            {skills.length > 0 ? <Skills skills={skills} onDelete={deleteSkill} /> : 'Add a Skill'}
           </div>
         </div>
 

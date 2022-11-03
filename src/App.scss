@@ -45,8 +45,40 @@ section{
 	resize: none;
 	height: 200px;
 }
-.bio{
+.bio,.desc{
 	width: 100%;
+}
+.skill-input{
+	gap: 20px;
+}
+.skill-input .input-block{
+	width: 100%;
+}
+.skill-input .input-block:nth-child(2){
+	width: 20%;
+}
+.skill-input .input-block:nth-child(2) input{
+	cursor: pointer;
+	background-color: $secondary-semidark;
+	color: $bg-color;
+	transition: all .3s;
+	border: 1px solid $secondary-semidark;
+}
+.skill-input .input-block:nth-child(2) input:hover{
+	background-color: $secondary-dark;
+}
+.skills{
+	padding: 2rem;
+	gap: 20px;
+	flex-wrap: wrap;
+	font-size: 1.6rem;
+}
+.skills span{
+	background-color: $secondary-light;
+	padding: 1rem 2rem;
+	border-radius: 100px;
+	gap: 10px;
+	max-width: 150px;
 }
 
 .buttons{
