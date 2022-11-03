@@ -42,7 +42,7 @@ const WorkHistory = () => {
                         </div>
                     </div>
                     <div className="row flex justify-between align-center full-width">
-                        <div className="input-block">
+                        <div className="input-block desc">
                             <label>Work Description</label>
                             <TextArea name="workDescription1" />
                         </div>
