@@ -10,10 +10,12 @@ import {
   changeBio
 } from "./resumeSlice";
 
+
 const ResumeBuilder = () => {
   const [skills, setSkills] = useState([
   ])
   const [text, setText] = useState('')
+
 
   const setSkill = () => {
     addSkill(text)
@@ -35,7 +37,6 @@ const ResumeBuilder = () => {
 
   const nextPage = () => {
     dispatch(changeProgressBar(40))
-    // dispatch(changeEducation({ ...education }));
     navigate("/education");
   };
 
@@ -81,7 +82,7 @@ const ResumeBuilder = () => {
             <div className="input-block bio">
               <label>Bio</label>
               <TextArea name="bio" />
-            </div>
+              </div>
           </div>
           <div className="row flex justify-center align-center full-width skill-input">
             <div className="input-block">
