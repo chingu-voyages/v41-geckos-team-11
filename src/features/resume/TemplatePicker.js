@@ -24,7 +24,7 @@ const TemplatePicker = () => {
 
     return (
         <Fragment>
-            <div>Hey, {passedName} pick a template</div>
+            <h3>Hey, {passedName} pick a template</h3>
             <form>
                 <input onChange={selectTemplate} type="radio" id="first-template" name="templatepick" value="first-template" />
                 <label htmlFor="first-template" className="example1"></label>

@@ -7,6 +7,14 @@ import Input from "../../components/Input";
 import {
     changeProgressBar
 } from "./resumeSlice";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+import {
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faPlus);
+
 
 const WorkHistory = () => {
     const navigate = useNavigate();
@@ -47,6 +55,7 @@ const WorkHistory = () => {
                             <TextArea name="workDescription1" />
                         </div>
                     </div>
+                    <FontAwesomeIcon icon={("fa-solid", "fa-plus")} />
                 </div>
             </form>
             <div className="buttons flex justify-between align-center">
