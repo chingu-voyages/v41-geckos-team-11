@@ -15,16 +15,14 @@ function App() {
 		<>
 			<Header />
 			<main>
-				<section>
-					<Routes>
-						<Route exact path='/' element={<LandingPage />} />
-						<Route exact path='/resume-builder' element={<ResumeBuilder />} />
-						<Route exact path='/education' element={<Education />} />
-						<Route exact path='/work-history' element={<WorkHistory />} />
-						<Route path='/template' element={<TemplatePicker />} />
-						<Route path='/final' element={<FinalView />} />
-					</Routes>
-				</section>
+				<Routes>
+					<Route exact path='/' element={<LandingPage />} />
+					<Route exact path='/resume-builder' element={<ResumeBuilder />} />
+					<Route exact path='/education' element={<Education />} />
+					<Route exact path='/work-history' element={<WorkHistory />} />
+					<Route path='/template' element={<TemplatePicker />} />
+					<Route path='/final' element={<FinalView />} />
+				</Routes>
 			</main>
 		</>
 	);

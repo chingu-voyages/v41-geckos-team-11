@@ -9,13 +9,13 @@ const FinalView = () => {
 	const pickedTemplate = useSelector((state) => state.resume.template);
 
 	return (
-		<div className='wrapper'>
+		<section className='wrapper'>
 			{pickedTemplate === `first-template` ? (
 				<TemplateOne pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			) : (
-				<TemplateBlue pickedTemplate={pickedTemplate} resumeData={resumeData}  />
+				<TemplateBlue pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			)}
-		</div>
+		</section>
 	);
 };
 
