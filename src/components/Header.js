@@ -12,9 +12,7 @@ function Header() {
 			<header>
 				<h1>resuME Builder</h1>
 			</header>
-			{location.pathname === `/` ? (
-				<></>
-			) : (
+			{location.pathname !== `/` && (
 				<div className='progress-bar'>
 					<h2 className='progress-bar__header'>{`${progressBar}%`}</h2>
 

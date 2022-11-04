@@ -6,9 +6,13 @@ function LandingPage() {
 		navigate('/resume-builder');
 	};
 	return (
-		<div className='landing-page'>
-			<h2>Build your resume with us</h2>
-			<div className='buttons flex justify-end align-center'>
+		<div className='landing-wrapper flex column justify-center align-center'>
+			<div className='title-container'>
+				<h2 className='title'>Build your resume...</h2>
+				<p className='subtitle'>new resume new you</p>
+			</div>
+
+			<div className='buttons flex justify-center align-center'>
 				<button className='next' onClick={start}>
 					Start: resuME Builder
 				</button>
