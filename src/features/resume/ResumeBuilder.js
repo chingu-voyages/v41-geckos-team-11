@@ -7,7 +7,7 @@ import Skills from "../../components/Skills";
 
 import {
   changeProgressBar,
-  changeBio
+  addSkills
 } from "./resumeSlice";
 
 
@@ -37,6 +37,7 @@ const ResumeBuilder = () => {
 
   const nextPage = () => {
     dispatch(changeProgressBar(40))
+    dispatch(addSkills(...skills))
     navigate("/education");
   };
 
