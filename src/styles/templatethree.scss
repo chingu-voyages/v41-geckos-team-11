@@ -16,11 +16,20 @@
         flex-wrap: nowrap;
         align-items: center;
         justify-content: flex-start;
+        gap: 5px;
         margin-block: 1rem;
+        font-size: 14px;
+        span{
+            font-size: 14px;
+        }
+        svg{
+            width: 15px;
+            height: 15px;
+        }
       }
     }
     section {
-      width: 70%;
+      width: 65%;
       padding: 0;
       .profile {
         gap: 2rem;

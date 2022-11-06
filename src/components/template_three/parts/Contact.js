@@ -3,7 +3,7 @@ import {
     faEnvelope,
     faLink,
     faMapMarkerAlt,
-    faPhoneAlt
+    faPhone
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -21,7 +21,7 @@ function Contact({ location, phone, email, socialWeb, linkedin }) {
                 </li>
                 <li>
                     <FontAwesomeIcon
-                        icon={('fa-solid', faPhoneAlt)}
+                        icon={('fa-solid', faPhone)}
                     />
                     <span>{phone}</span>
                 </li>
