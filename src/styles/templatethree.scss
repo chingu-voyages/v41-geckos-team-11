@@ -3,8 +3,9 @@
 .third-template {
   font-family: "Poppins", sans-serif;
   .wrapper {
-    padding: 2rem;
+    padding: 3rem;
     background: url(../assets/design1.png);
+    gap: 15px;
     aside {
       width: 30%;
       ul {
@@ -19,12 +20,17 @@
         gap: 5px;
         margin-block: 1rem;
         font-size: 14px;
-        span{
-            font-size: 14px;
+        span {
+          font-size: 14px;
+          line-break: anywhere;
         }
-        svg{
-            width: 15px;
-            height: 15px;
+        a {
+          color: $secondary-semidark;
+        }
+        svg {
+          width: 15px;
+          height: 15px;
+          color: $secondary-semidark;
         }
       }
     }
@@ -48,9 +54,10 @@
       .bio {
         padding: 1rem;
       }
-      .education, .work {
-        h2{
-            padding-bottom: 1rem;
+      .education,
+      .work {
+        h2 {
+          padding-bottom: 1rem;
         }
         .row {
           gap: 30px;
@@ -69,7 +76,7 @@
             }
             p {
               font-size: 14px;
-            //   max-width: 90%;
+              //   max-width: 90%;
             }
           }
         }
@@ -77,6 +84,18 @@
     }
     li {
       list-style: none;
+    }
+  }
+  button {
+    border: none;
+    padding: 2rem 4rem;
+    background-color: $primary-main;
+    color: #f3f3f3;
+    margin: 2rem auto;
+    display: block;
+    transition: all .3s;
+    &:hover{
+        background-color: $primary-semidark;
     }
   }
 }

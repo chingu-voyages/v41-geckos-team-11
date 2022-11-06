@@ -35,13 +35,13 @@ function Contact({ location, phone, email, socialWeb, linkedin }) {
                     <FontAwesomeIcon
                         icon={('fa-solid', faLinkedin)}
                     />
-                    <span>{linkedin}</span>
+                    <span><a href={linkedin}>{linkedin}</a></span>
                 </li>
                 <li>
                     <FontAwesomeIcon
                         icon={('fa-solid', faLink)}
                     />
-                    <span>{socialWeb}</span>
+                    <span><a href={socialWeb}>{socialWeb}</a></span>
                 </li>
             </ul>
         </div>

@@ -41,6 +41,7 @@ const TemplateThree = ({ resumeData }) => {
         workDescription1,
         jobTitle1
     } = resumeData;
+    console.log(skills);
 
     const modifyDate = (date) => {
         const newArr = date.split("-");
@@ -50,13 +51,10 @@ const TemplateThree = ({ resumeData }) => {
 
     return (
         <div className="third-template">
-            <button className="third-template__button" onClick={exportPDFWithMethod}>
-                SAVE CV AS PDF
-            </button>
             <PDFExport
                 ref={pdfExportComponent}
                 paperSize="auto"
-                margin={40}
+                margin={0}
                 fileName={`CV ${firstName} ${lastName}`}
                 author={`${firstName} ${lastName}`}
             >
@@ -143,6 +141,9 @@ const TemplateThree = ({ resumeData }) => {
                 </div>
 
             </PDFExport>
+            <button className="third-template__button" onClick={exportPDFWithMethod}>
+                SAVE CV AS PDF
+            </button>
         </div>
     );
 };
