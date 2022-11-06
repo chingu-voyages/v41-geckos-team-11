@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import React from 'react';
 import TemplateOne from '../../components/TemplateOne';
 import TemplateBlue from '../../components/TemplateBlue';
+import TemplateThree from '../../components/TemplateThree';
 import '../../App.css';
 
 const FinalView = () => {
@@ -10,10 +11,10 @@ const FinalView = () => {
 
 	return (
 		<div className='wrapper'>
-			{pickedTemplate === `first-template` ? (
-				<TemplateOne pickedTemplate={pickedTemplate} resumeData={resumeData} />
-			) : (
+			{pickedTemplate === `second-template` ? (
 				<TemplateBlue pickedTemplate={pickedTemplate} resumeData={resumeData}  />
+			) : (
+				<TemplateThree pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			)}
 		</div>
 	);
