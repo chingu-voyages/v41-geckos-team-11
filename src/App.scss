@@ -3,6 +3,7 @@
 @import './styles/theme';
 @import './styles/prestyles';
 @import './styles/header';
+@import './styles/templatethree';
 
 // @import "~react-datepicker/dist/react-datepicker.css";
 
@@ -119,6 +120,14 @@ section{
 	height: 200px;
 	display: inline-block;
 	background-image: url('../src/assets/design2.png');
+	background-size: cover;
+	border: 1px solid lightblue;
+}
+.example3 {
+	width: 400px;
+	height: 200px;
+	display: inline-block;
+	background-image: url('../src/assets/design1.png');
 	background-size: cover;
 	border: 1px solid lightblue;
 }
