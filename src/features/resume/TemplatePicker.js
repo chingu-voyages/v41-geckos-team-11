@@ -33,6 +33,7 @@ const TemplatePicker = () => {
 					value='first-template'
 				/>
 				<label htmlFor='first-template' className='example1'></label>
+        
 				<input
 					onChange={selectTemplate}
 					type='radio'
@@ -41,6 +42,17 @@ const TemplatePicker = () => {
 					value='second-template'
 				/>
 				<label htmlFor='second-template' className='example2'></label>
+        
+        
+        <input
+          onChange={selectTemplate}
+          type="radio"
+          id="third-template"
+          name="templatepick"
+          value="third-template"
+        />
+        <label htmlFor="third-template" className="example3"></label>
+       
 			</form>
 			<div className='buttons flex justify-between align-center'>
 				<button onClick={prevPage}>Back</button>

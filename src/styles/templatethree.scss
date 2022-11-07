@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.third-template {
+  font-family: "Poppins", sans-serif;
+  .wrapper {
+    padding: 3rem;
+    background: url(../assets/design1.png);
+    gap: 15px;
+    aside {
+      width: 30%;
+      ul {
+        padding-left: 1rem;
+      }
+      li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-block: 1rem;
+        font-size: 14px;
+        span {
+          font-size: 14px;
+          line-break: anywhere;
+        }
+        a {
+          color: $secondary-semidark;
+        }
+        svg {
+          width: 15px;
+          height: 15px;
+          color: $secondary-semidark;
+        }
+      }
+    }
+    section {
+      width: 65%;
+      padding: 0;
+      .profile {
+        gap: 2rem;
+        padding-block: 1rem;
+        h2 {
+          height: 100px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100px;
+          background-color: $secondary-semidark;
+          color: white;
+        }
+      }
+      .bio {
+        padding: 1rem;
+      }
+      .education,
+      .work {
+        h2 {
+          padding-bottom: 1rem;
+        }
+        .row {
+          gap: 30px;
+          padding-block: 1rem;
+          .date {
+            max-width: 15%;
+            width: 200px;
+            padding-top: 1rem;
+            p {
+              font-size: 12px;
+            }
+          }
+          .details {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 14px;
+              //   max-width: 90%;
+            }
+          }
+        }
+      }
+    }
+    li {
+      list-style: none;
+    }
+  }
+  button {
+    border: none;
+    padding: 2rem 4rem;
+    background-color: $primary-main;
+    color: #f3f3f3;
+    margin: 2rem auto;
+    display: block;
+    transition: all .3s;
+    &:hover{
+        background-color: $primary-semidark;
+    }
+  }
+}

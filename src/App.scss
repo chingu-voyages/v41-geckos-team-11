@@ -3,7 +3,10 @@
 @import './styles/theme';
 @import './styles/prestyles';
 @import './styles/header';
+@import './styles/templatethree';
+
 @import './styles/landing-page.scss';
+
 
 // @import "~react-datepicker/dist/react-datepicker.css";
 
@@ -30,9 +33,23 @@ section {
 	padding: 6rem 1rem;
 }
 
-.input-block {
-	width: 48%;
-	padding-block: 1rem;
+
+.redirect{
+	color: $secondary-semidark;
+	display: block;
+	margin: 2rem auto;
+	font-size: 20px;
+	text-align: center;
+	transition: all .3s;
+	&:hover{
+		color: $secondary-light;
+	}
+}
+
+.input-block{
+    width: 48%;
+    padding-block: 1rem;
+
 }
 
 .input-block input,
@@ -126,6 +143,14 @@ section {
 	height: 200px;
 	display: inline-block;
 	background-image: url('../src/assets/design2.png');
+	background-size: cover;
+	border: 1px solid lightblue;
+}
+.example3 {
+	width: 400px;
+	height: 200px;
+	display: inline-block;
+	background-image: url('../src/assets/design1.png');
 	background-size: cover;
 	border: 1px solid lightblue;
 }
