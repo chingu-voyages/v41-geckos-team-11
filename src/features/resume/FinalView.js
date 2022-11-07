@@ -9,6 +9,7 @@ const FinalView = () => {
 	const resumeData = useSelector((state) => state.resume.resumeData);
 	const pickedTemplate = useSelector((state) => state.resume.template);
 
+
 	if (pickedTemplate === `first-template`) {
 		return (
 			<div className="wrapper">
