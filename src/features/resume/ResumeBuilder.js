@@ -11,8 +11,6 @@ import {
   addSkills
 } from "./resumeSlice";
 
-import { changeProgressBar, changeBio } from './resumeSlice';
-
 const ResumeBuilder = () => {
 	const [skills, setSkills] = useState([]);
 	const [text, setText] = useState('');
@@ -41,11 +39,6 @@ const ResumeBuilder = () => {
     navigate("/education");
   };
 
-
-	const nextPage = () => {
-		dispatch(changeProgressBar(40));
-		navigate('/education');
-	};
 
 	return (
 		<section>
