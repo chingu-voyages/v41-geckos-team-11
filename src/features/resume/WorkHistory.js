@@ -17,6 +17,7 @@ library.add(faPlus);
 
 
 const WorkHistory = () => {
+    const [toggleWorkExperience, setToggleWorkExperience] = useState(false)
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -55,7 +56,31 @@ const WorkHistory = () => {
                             <TextArea name="workDescription1" />
                         </div>
                     </div>
-                    <FontAwesomeIcon icon={("fa-solid", "fa-plus")} />
+                    <div className={toggleWorkExperience ? '' : 'hidden'}>
+                        <div className="row flex justify-between align-center full-width">
+                            <div className="input-block">
+                                <Input text="Company" name="company2" />
+                            </div>
+                            <div className="input-block">
+                                <Input text="Job Title" name="jobTitle2" />
+                            </div>
+                        </div>
+                        <div className="row flex justify-between align-center full-width">
+                            <div className="input-block">
+                                <Input text="Start Date" type="month" name="startWorkDate2" />
+                            </div>
+                            <div className="input-block">
+                                <Input text="End Date" type="month" name="endWorkDate2" />
+                            </div>
+                        </div>
+                        <div className="row flex justify-between align-center full-width">
+                            <div className="input-block">
+                                <label>Work Description</label>
+                                <TextArea name="workDescription2" />
+                            </div>
+                        </div>
+                    </div>
+                    <FontAwesomeIcon onClick={setToggleWorkExperience(!toggleWorkExperience)} icon={("fa-solid", "fa-plus")} />
                 </div>
             </form>
             <div className="buttons flex justify-between align-center">
