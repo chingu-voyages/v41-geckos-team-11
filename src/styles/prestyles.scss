@@ -21,6 +21,10 @@ h1{
 h2{
     font-size: 3rem;
 }
+h3 {
+    font-size: 1.5rem;
+}
+
 p,label,span,input,select,option{
     color: $secondary-main;
     font-size: 1.6rem;
@@ -70,4 +74,8 @@ a,button{
 
 .hidden {
     display: none;
+}
+
+.mar-1{
+   margin: 1rem 0; 
 }

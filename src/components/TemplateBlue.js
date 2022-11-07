@@ -24,6 +24,7 @@ const TemplateTwo = ({ resumeData }) => {
     lastName,
     email,
     education,
+    skills,
     bio,
     linkedin,
     location,
@@ -62,6 +63,7 @@ const TemplateTwo = ({ resumeData }) => {
           <h5 className="second-template__title">{title}</h5>
           <div className="second-template__about">
             <p className="second-template__bio">{bio}</p>
+            {skills.map(skill=> (<p key={skill.id}>{skill.text}</p>))}
           </div>
           <div className="second-template__section">
             <div className="second-template__basic">

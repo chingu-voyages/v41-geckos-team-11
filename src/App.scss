@@ -3,6 +3,10 @@
 @import './styles/theme';
 @import './styles/prestyles';
 @import './styles/header';
+@import './styles/templatethree';
+
+@import './styles/landing-page.scss';
+
 
 // @import "~react-datepicker/dist/react-datepicker.css";
 
@@ -16,7 +20,13 @@ html {
 	background: $bg-color;
 }
 
-section{
+html,
+body,
+main {
+	min-height: 100vh;
+}
+
+section {
 	width: 100%;
 	max-width: 900px;
 	margin: auto;
@@ -24,55 +34,101 @@ section{
 }
 
 
+.redirect{
+	color: $secondary-semidark;
+	display: block;
+	margin: 2rem auto;
+	font-size: 20px;
+	text-align: center;
+	transition: all .3s;
+	&:hover{
+		color: $secondary-light;
+	}
+}
+
 .input-block{
     width: 48%;
     padding-block: 1rem;
+
 }
 
 .input-block input,
 .input-block select,
-.input-block textarea{
-    /* width: 100%; */
-    border-radius: 0;
-    border: 1px solid $secondary-light;
-    padding: 1rem 1rem;
-    margin-block: .5rem;
-    background-color: transparent;
+.input-block textarea {
+	/* width: 100%; */
+	border-radius: 0;
+	border: 1px solid $secondary-light;
+	padding: 1rem 1rem;
+	margin-block: 0.5rem;
+	background-color: transparent;
 	width: 100%;
 }
 
-.input-block textarea{
+.input-block textarea {
 	resize: none;
 	height: 200px;
 }
-.bio{
+.bio,
+.desc {
 	width: 100%;
 }
+.skill-input {
+	gap: 20px;
+}
+.skill-input .input-block {
+	width: 100%;
+}
+.skill-input .input-block:nth-child(2) {
+	width: 20%;
+}
+.skill-input .input-block:nth-child(2) input {
+	cursor: pointer;
+	background-color: $secondary-semidark;
+	color: $bg-color;
+	transition: all 0.3s;
+	border: 1px solid $secondary-semidark;
+}
+.skill-input .input-block:nth-child(2) input:hover {
+	background-color: $secondary-dark;
+}
+.skills {
+	padding: 2rem;
+	gap: 20px;
+	flex-wrap: wrap;
+	font-size: 1.6rem;
+}
+.skills span {
+	background-color: $secondary-light;
+	padding: 1rem 2rem;
+	border-radius: 100px;
+	gap: 10px;
+	max-width: 200px;
+}
 
-.buttons{
-    padding-block: 2rem;
+.buttons {
+	padding-block: 2rem;
 }
-.buttons button{
-    background-color: transparent;
-    padding: 1rem 2rem;
-    border-radius: 0;
-    border: 2px solid $blue;
-    color: $blue;
-    font-size: 1.6rem;
-    transition: all .3s;
+.buttons button {
+	background-color: transparent;
+	padding: 1rem 2rem;
+	border-radius: 0;
+	border: 2px solid $blue;
+	color: $blue;
+	font-size: 1.6rem;
+	transition: all 0.3s;
 }
-.buttons button:hover{
-    background-color: $baby-blue;
-    /* color: $bg-color); */
+.buttons button:hover {
+	background-color: $baby-blue;
+	/* color: $bg-color); */
 }
-.buttons button.next{
-    border: 2px solid $primary-main;
-    background-color: $primary-main;
-    box-shadow: 0px 0px 5px -2px $secondary-semilight;
-    color: $bg-color;
+.buttons button.next {
+	border: 2px solid $primary-main;
+	background-color: $primary-main;
+	box-shadow: 0px 0px 5px -2px $secondary-semilight;
+	color: $bg-color;
 }
-.buttons button.next:hover{
-    background-color: $primary-semidark;
+.buttons button.next:hover {
+	background-color: $primary-semidark;
 }
 
 .example1 {
@@ -87,6 +143,14 @@ section{
 	height: 200px;
 	display: inline-block;
 	background-image: url('../src/assets/design2.png');
+	background-size: cover;
+	border: 1px solid lightblue;
+}
+.example3 {
+	width: 400px;
+	height: 200px;
+	display: inline-block;
+	background-image: url('../src/assets/design1.png');
 	background-size: cover;
 	border: 1px solid lightblue;
 }
@@ -164,7 +228,6 @@ input:last-child {
 }
 
 .second-template {
-	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -250,14 +313,20 @@ input:last-child {
 		width: 100px;
 		font-weight: bold;
 	}
-	
 }
 
-@media screen and (min-width: 1700px){
-	:root{
+@media screen and (min-width: 1700px) {
+	:root {
 		font-size: 80%;
 	}
-	section{
+	section {
 		max-width: 1200px;
 	}
+}
+
+
+.fa-plus {
+	font-size: 3rem;
+	border: 0.5rem $primary-light solid;
+	border-radius: 25px;
 }
