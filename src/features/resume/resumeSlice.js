@@ -9,6 +9,7 @@ export const resumeSlice = createSlice({
 			email: '',
 			socialWebsite: '',
 			education: [],
+			skills: [],
 			bio: '',
 			linkedin: '',
 			location: '',
@@ -39,6 +40,13 @@ export const resumeSlice = createSlice({
 		}, 
 		changeProgressBar: (state, action) => {
 			state.resumeData.progressBar = action.payload
+		}, 
+		addSkills: (state, action) => {
+			const { id } = action.payload;
+			const skillsFound = state.resumeData.skills.find((skills) => skills.id === id);
+			if (!skillsFound) {
+				state.resumeData.skills.push(action.payload);
+			}
 		}
 	},
 });
@@ -47,6 +55,7 @@ export const {
 	changeEducation,
 	pickTemplate,
 	setResume,
+	addSkills,
 	changeProgressBar
 } = resumeSlice.actions;
 export default resumeSlice.reducer;

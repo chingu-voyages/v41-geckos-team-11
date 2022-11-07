@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import TextArea from '../../components/TextArea';
-import Input from '../../components/Input';
-import Skills from '../../components/Skills';
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import TextArea from "../../components/TextArea";
+import Input from "../../components/Input";
+import Skills from "../../components/Skills";
+
+import {
+  changeProgressBar,
+  addSkills
+} from "./resumeSlice";
 
 import { changeProgressBar, changeBio } from './resumeSlice';
 
@@ -28,6 +34,13 @@ const ResumeBuilder = () => {
 	};
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+
+  const nextPage = () => {
+    dispatch(changeProgressBar(40))
+    dispatch(addSkills(...skills))
+    navigate("/education");
+  };
+
 
 	const nextPage = () => {
 		dispatch(changeProgressBar(40));
