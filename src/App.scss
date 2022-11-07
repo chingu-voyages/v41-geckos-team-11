@@ -24,6 +24,17 @@ section{
 	padding: 6rem 1rem;
 }
 
+.redirect{
+	color: $secondary-semidark;
+	display: block;
+	margin: 2rem auto;
+	font-size: 20px;
+	text-align: center;
+	transition: all .3s;
+	&:hover{
+		color: $secondary-light;
+	}
+}
 
 .input-block{
     width: 48%;
