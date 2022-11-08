@@ -1,0 +1,81 @@
+:root{
+    /*typography*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* size */
+    font-size: 62.5%;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+input:active, input:focus, select:active, select:focus{
+    outline: none;
+}
+h1,h2,h3,h4,h5,h6{
+    color: $secondary-semidark;
+}
+h1{
+    font-size: 3.6rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+p,label,span,input,select,option{
+    color: $secondary-main;
+    font-size: 1.6rem;
+}
+a,button{
+    cursor: pointer;
+}
+.full-width{
+    width: 100%;
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.nowrap{
+    flex-wrap: nowrap;
+}
+.column{
+    flex-direction: column;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.by2{
+    width: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.mar-1{
+   margin: 1rem 0; 
+}
