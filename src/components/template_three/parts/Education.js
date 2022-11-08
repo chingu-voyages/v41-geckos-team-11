@@ -18,7 +18,7 @@ function Education(
                         </div>
                         <div className="details">
                             <h3>{el.degree}: {el.course}</h3>
-                            <p>{el.university} - Nigeria</p>
+                            <p>{el.university} - {el.schoolLocation}</p>
                         </div>
                     </div>
                 ))

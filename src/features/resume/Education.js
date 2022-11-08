@@ -12,6 +12,9 @@ function Education() {
 		university: '',
 		degree: '',
 		course: '',
+		schoolLocation: '',
+		// startSchoolDate1: '',
+        // endSchoolDate1: '',
 	});
 
 	const navigate = useNavigate();
@@ -44,6 +47,10 @@ function Education() {
 							<div className='input-block'>
 								<label htmlFor='university'>University</label>
 								<input onChange={handleEducationChange} id='university' name='university' />
+							</div>
+							<div className='input-block'>
+								<label htmlFor='schoolLocation'>School Location</label>
+								<input onChange={handleEducationChange} id='schoolLocation' name='schoolLocation' />
 							</div>
 						</div>
 						<div className='row flex align-center justify-between full-width'>
