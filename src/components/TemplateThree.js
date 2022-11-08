@@ -58,63 +58,6 @@ const TemplateThree = ({ resumeData }) => {
                 fileName={`CV ${firstName} ${lastName}`}
                 author={`${firstName} ${lastName}`}
             >
-                {/* <div className="third-template__wrapper">
-                    <h5 className="third-template__name">
-                        {firstName} {lastName} CV
-                    </h5>
-                    <h5 className="third-template__title">{title}</h5>
-                    <div className="third-template__about">
-                        <p className="third-template__bio">{bio}</p>
-                        {skills.map(skill => (<p key={skill.id}>{skill.text}</p>))}
-                    </div>
-                    <div className="third-template__section">
-                        <div className="third-template__basic">
-                            <h3>
-                                <FontAwesomeIcon icon={("fa-regular", "phone")} />
-                            </h3>
-                            <div>
-                                <h3 className="header">Contact</h3>
-                                <p className="header__text">{phone}</p>
-                                <p className="header__text">{location}</p>
-                                <p className="header__text">{email}</p>
-                                <p className="header__text">{socialWeb}</p>
-                                <p className="header__text">{linkedin}</p>
-                            </div>
-                        </div>
-                        <div className="third-template__edu">
-                            <h3>
-                                <FontAwesomeIcon icon={("fa-light", "graduation-cap")} />
-                            </h3>
-                            <div>
-                                <h3 className="header">Education</h3>
-                                {education &&
-                                    education.map(el => (
-                                        <div>
-                                            <p className="header__text">{el.university}</p>
-                                            <p className="header__text">Degree: {el.degree}</p>
-                                            <p className="header__text">Course: {el.course}</p>
-                                        </div>
-                                    ))}
-                            </div>
-                        </div>
-                        <div className="third-template__work">
-                            <h3>
-                                <FontAwesomeIcon icon={("fa-light", "briefcase")} />
-                            </h3>
-                            <div>
-                                <h3 className="header">Work Experience</h3>
-                                <div>
-                                    <p className="header__text">{company}</p>
-                                    <p className="header__text">
-                                        {modifyDate(startWorkDate1)} - {modifyDate(endWorkDate1)}
-                                    </p>
-                                    <p className="header__text">{jobTitle1}</p>
-                                    <p className="header__text">{workDescription1}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 <div className="wrapper flex row justify-between">
                     <Side
                         location={location}

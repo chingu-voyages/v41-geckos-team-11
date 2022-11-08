@@ -12,7 +12,7 @@ function Education(
             <h2>Education</h2> 
             {education &&
                 education.map(el => (
-                    <div className="flex row">
+                    <div key={Math.floor(Math.random() * 10000) + 1} className="flex row">
                         <div className="date">
                             <p>{startSchoolDate1} 2020/02 - 2022/02 {endSchoolDate1}</p>
                         </div>
