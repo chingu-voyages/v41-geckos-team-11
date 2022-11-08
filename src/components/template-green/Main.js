@@ -30,7 +30,6 @@ const Main = () => {
         </div>
       </PDFExport>
       <TemplateFooter exportPDFWithMethod={exportPDFWithMethod}/>
-      {/* <button className="pdf-button" onClick={exportPDFWithMethod}>SAVE CV AS PDF</button>   */}
     </Fragment>
   );
 };
