@@ -1,4 +1,4 @@
-import Bio from './parts/Bio'
+import Bio from './Bio'
 import Education from './parts/Education'
 import WorkHistory from './parts/WorkHistory'
 
@@ -20,12 +20,6 @@ function Main(
 ) {
     return (
         <section>
-            <Bio
-                firstName={firstName}
-                lastName={lastName}
-                title={title}
-                bio={bio}
-            />
             <Education
                 startSchoolDate1={startSchoolDate1}
                 endSchoolDate1={endSchoolDate1}

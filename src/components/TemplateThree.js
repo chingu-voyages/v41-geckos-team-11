@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
+import Bio from "./template_three/Bio";
 import Main from "./template_three/Main";
 import Side from "./template_three/Side";
 
@@ -58,29 +59,37 @@ const TemplateThree = ({ resumeData }) => {
                 fileName={`CV ${firstName} ${lastName}`}
                 author={`${firstName} ${lastName}`}
             >
-                <div className="wrapper flex row justify-between">
-                    <Side
-                        location={location}
-                        phone={phone}
-                        email={email}
-                        socialWeb={socialWeb}
-                        linkedin={linkedin}
-                        skills={skills}
-                    />
-                    <Main
+                <div className="wrapper">
+                    <Bio
                         firstName={firstName}
                         lastName={lastName}
                         title={title}
                         bio={bio}
-                        startSchoolDate1={startSchoolDate1}
-                        endSchoolDate1={endSchoolDate1}
-                        education={education}
-                        jobTitle1={jobTitle1}
-                        workDescription1={workDescription1}
-                        startWorkDate1={startWorkDate1}
-                        endWorkDate1={endWorkDate1}
-                        company={company}
                     />
+                    <div className="flex row justify-between">
+                        <Side
+                            location={location}
+                            phone={phone}
+                            email={email}
+                            socialWeb={socialWeb}
+                            linkedin={linkedin}
+                            skills={skills}
+                        />
+                        <Main
+                            firstName={firstName}
+                            lastName={lastName}
+                            title={title}
+                            bio={bio}
+                            startSchoolDate1={startSchoolDate1}
+                            endSchoolDate1={endSchoolDate1}
+                            education={education}
+                            jobTitle1={jobTitle1}
+                            workDescription1={workDescription1}
+                            startWorkDate1={startWorkDate1}
+                            endWorkDate1={endWorkDate1}
+                            company={company}
+                        />
+                    </div>
                 </div>
 
             </PDFExport>
