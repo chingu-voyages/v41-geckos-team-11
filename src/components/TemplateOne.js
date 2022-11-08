@@ -11,6 +11,16 @@ function TemplateOne({ resumeData }) {
 		title,
 		phone,
 		skills,
+		company,
+		company2,
+		jobTitle1,
+		jobTitle2,
+		startWorkDate1,
+		startWorkDate2,
+		endWorkDate1,
+		endWorkDate2,
+		workDescription1,
+		workDescription2,
 	} = resumeData;
 
 	console.log(resumeData);
@@ -30,6 +40,10 @@ function TemplateOne({ resumeData }) {
 				<p>
 					<span>email:</span> <a href={`mailto:${email}`}>{email}</a>
 				</p>
+				<p>
+					<span>linkedin:</span>
+					<a href={linkedin}> {linkedin}</a>
+				</p>
 			</div>
 			<h3 className='first-template__title'>Professional Summary</h3>
 			<hr class='divider' />
@@ -46,8 +60,17 @@ function TemplateOne({ resumeData }) {
 				))}
 			</ul>
 			<h3 className='first-template__title'>Work Experience</h3>
-			<hr class='divider' />
-			<div className='first-template__work'></div>
+			<hr className='divider' />
+			<div className='first-template__work'>
+				<h4>
+					{company}, {jobTitle1}, {startWorkDate1} to {endWorkDate1}
+				</h4>
+				<p>{workDescription1}</p>
+				<h4>
+					{company2}, {jobTitle2}, {startWorkDate2} to {endWorkDate2}
+				</h4>
+				<p>{workDescription2}</p>
+			</div>
 			<h3 className='first-template__title'>Education</h3>
 			<hr className='divider' />
 			<ul className='first-template__edu'>
