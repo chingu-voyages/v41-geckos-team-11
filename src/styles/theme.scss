@@ -18,3 +18,13 @@ $blue: #3983fa;
 $baby-blue: #bbcde5;
 
 $progress-bar-font: 'Rubik', sans-serif;
+
+.pdf-button {
+    border: 5px solid $primary-semidark;
+    background: $primary-main;
+    padding: 10px;
+    color: $bg-color;
+    font-weight: bolder;
+    margin: 1rem auto;
+    display: block;
+}
