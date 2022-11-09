@@ -5,6 +5,7 @@
 @import './styles/header';
 @import './styles/templatethree';
 @import './styles/template-green';
+@import './styles/template-picker';
 
 @import './styles/landing-page.scss';
 
@@ -128,46 +129,12 @@ section {
 	background-color: $primary-semidark;
 }
 
-.example1 {
-	display: inline-block;
-	width: 400px;
-	height: 460px;
-	background-color: white;
-}
-
-.example2 {
-	width: 400px;
-	height: 460px;
-	display: inline-block;
-	background-image: url('../src/assets/design2.png');
-	background-size: cover;
-	border: 1px solid lightblue;
-}
-.example3 {
-	width: 400px;
-	height: 460px;
-	display: inline-block;
-	background-image: url('../src/assets/template3.png');
-	background-size: cover;
-	border: 1px solid lightblue;
-}
-
-.example4 {
-	width: 400px;
-	height: 460px;
-	display: inline-block;
-	background-size: cover;
-	border: 1px solid lightblue;
-	background-image: url('../src/assets/design3.png');
-}
-
 input:last-child {
 	display: block;
 }
 
 .first-template {
 	width: 70%;
-	height: 1500px;
 	margin: 0 auto;
 	padding: 6em 12em;
 	background-color: white;
@@ -228,86 +195,6 @@ input:last-child {
 	}
 }
 
-.second-template {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-
-	&__wrapper {
-		background-image: url('../src/assets/design2.png');
-		height: 1500px;
-		background-repeat: no-repeat;
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.header {
-		text-decoration: grey wavy underline;
-		text-decoration-skip-ink: none;
-		height: 1.5em;
-		font-family: 'Fuzzy Bubbles', cursive;
-		font-size: 25px;
-
-		&__text {
-			font-size: 20px;
-			margin: 0.5rem;
-		}
-
-		&--extra {
-			font-weight: bold;
-		}
-	}
-
-	&__about {
-		margin-left: 180px;
-		margin-right: 180px;
-	}
-
-	&__work {
-		padding-left: 180px;
-		@include position-icons;
-	}
-
-	&__bio {
-		font-size: x-large;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 400;
-	}
-
-	&__edu {
-		@include position-icons;
-	}
-
-	&__name {
-		text-align: center;
-		text-transform: capitalize;
-		font-family: 'Fuzzy Bubbles', cursive;
-		font-size: 55px;
-		padding-top: 110px;
-		font-style: italic;
-	}
-
-	&__title {
-		text-align: center;
-		text-transform: capitalize;
-		font-family: 'Fuzzy Bubbles', cursive;
-		font-size: 35px;
-		font-weight: 900;
-	}
-
-	&__basic {
-		padding-left: 180px;
-		@include position-icons;
-	}
-
-	&__section {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin-top: 20px;
-	}
-}
-
 @media screen and (min-width: 1700px) {
 	:root {
 		font-size: 80%;
@@ -325,14 +212,15 @@ input:last-child {
 
 .template-green {
 	margin: 0 10rem;
-    padding: 11rem;
+	padding: 11rem;
 	border: 3rem solid #366252;
 	background: #faf5ea;
 	min-height: 800px;
 
-	h1, h3, li, p{
+	h1,
+	h3,
+	li,
+	p {
 		color: #366252;
-
 	}
-	
 }

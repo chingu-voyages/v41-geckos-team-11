@@ -12,34 +12,29 @@ import {
 } from "./resumeSlice";
 
 const ResumeBuilder = () => {
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
 	const [skills, setSkills] = useState([]);
 	const [text, setText] = useState('');
 
-	const setSkill = () => {
-		addSkill(text);
-		setText('');
-		document.getElementById('skillInput').value = '';
-	};
-	// Add Skill
-	const addSkill = (text) => {
+	const addSkill = () => {
 		const id = Math.floor(Math.random() * 10000) + 1;
 		const newSkill = { id, text };
 		setSkills([...skills, newSkill]);
+		dispatch(addSkills(newSkill))
+		setText('');
 	};
 
 	//Delete Task
 	const deleteSkill = (id) => {
 		setSkills(skills.filter((skill) => skill.id !== id));
 	};
-	const navigate = useNavigate();
-	const dispatch = useDispatch();
 
-  const nextPage = () => {
-    dispatch(changeProgressBar(40))
-    dispatch(addSkills(...skills))
-    navigate("/education");
-  };
-
+	const nextPage = () => {
+		dispatch(changeProgressBar(40))
+		navigate("/education");
+	};
 
 	return (
 		<section>
@@ -91,12 +86,12 @@ const ResumeBuilder = () => {
 								type='text'
 								name='skills'
 								placeholder='Input Skills'
-								onChange={(e) => setText(e.target.value)}
-								id='skillInput'
+								onChange={(e) => {setText(e.target.value)}}
+								value={text}
 							/>
 						</div>
 						<div className='input-block'>
-							<input type='button' value='Add' onClick={setSkill} />
+							<input type='button' value='Add' onClick={addSkill} />
 						</div>
 					</div>
 					<h2>Skills</h2>
