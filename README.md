@@ -1,22 +1,28 @@
-# 👋 HEYY GUYS!
-So I added a prototype of the app to the main view so you can see more or less the communication between pages. Now we have a functioning Single Page Application! 🎆 🍾 I kept it suuuper simple, so first filling a form (name), second picking a template and then the final view. There is a lot to do and as I have done quite a lot today and yesterday I will leave the project for you so you can practice and I will rejoin next week. Things to do:
+# CV BUILDER 🏗️ - ResuME 
+Are you tired of creating your CV all over again? 
+Look no further! Fill your details in the form and pick the template of your choice and download it. 
+Created by Chris, Roni and Paulina. 
 
-1. Have a look at the counter component to see how redux is implemented.
-The first page - form. Add CV fields to the form without the logic for now. Add a CSS so the form looks nice. Create a separate CSS file for the main form.
+##Tech used:
+React, Redux, React Router, SCSS
 
-2. Once the form looks good add the logic to the form so we save the details into REDUX store.
-The second page - pick a template. Instead of adding a simple background color how about using a background image? Or use any ideas you might have about the CV template and add it to the CSS instead of the color. Move the CSS to a separate file. Use canva.com for CV template inspiration.
+##Features
+1. Landing page
+![Landing page](landingpage.png)
 
-3. The third page: final view! Grab all the details from the redux store form info and display it and add the styling that got pick in a previous step.
+2. Form
+![About](form1.png)
+![Edu](edu.png)
+![Work](work.png)
 
-HaVe FuN 🎉
+3. Template picker
+![TemplatePick](template-pick.png)
 
-Development branch has been rename main. To update your local clone follow these steps:
+4. Final view and CV Download
+![CV1](cv1.png)
+![CV2](cv2.png)
 
-1. git branch -m development main
-2. git fetch origin
-3. git branch -u origin/main main
-4. git remote set-head origin -a
+
 
 # Getting Started with Create React App
 
