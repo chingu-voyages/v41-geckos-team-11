@@ -22,7 +22,6 @@ const TemplatePicker = () => {
   const selectTemplate = e => {
     dispatch(pickTemplate(e.target.value));
     setTemplate(e.target.value)
-    console.log(e.target.value, 'val')
   };
 
   return (
@@ -37,14 +36,6 @@ const TemplatePicker = () => {
           value="first-template"
         />
         <label htmlFor="first-template" className={ `${ pickedTemplate === 'first-template' ? 'active' : null} example1`}></label>
-        {/* <input
-          onChange={selectTemplate}
-          type="radio"
-          id="second-template"
-          name="templatepick"
-          value="second-template"
-        />
-        <label htmlFor="second-template" className={ `${ pickedTemplate === 'second-template' ? 'active' : null} example2`}></label> */}
         <input
           onChange={selectTemplate}
           type="radio"

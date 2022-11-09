@@ -5,6 +5,7 @@
 @import './styles/header';
 @import './styles/templatethree';
 @import './styles/template-green';
+@import './styles/template-picker';
 
 @import './styles/landing-page.scss';
 
@@ -129,105 +130,8 @@ section {
 	background-color: $primary-semidark;
 }
 
-.example1 {
-	display: inline-block;
-	width: 400px;
-	height: 460px;
-	background-image: url('../src/assets/template1.png');
-	background-size: cover;
-	border: 1px solid lightblue;
-}
-
-.example2 {
-	width: 400px;
-	height: 460px;
-	display: inline-block;
-	background-image: url('../src/assets/design2.png');
-	background-size: cover;
-	border: 1px solid lightblue;
-}
-.example3 {
-	width: 400px;
-	height: 460px;
-	display: inline-block;
-	background-image: url('../src/assets/template3.png');
-	background-size: cover;
-	border: 1px solid lightblue;
-}
-
-.example4 {
-	width: 400px;
-	height: 460px;
-	display: inline-block;
-	background-size: cover;
-	border: 1px solid lightblue;
-	background-image: url('../src/assets/design3.png');
-}
-
 input:last-child {
 	display: block;
-}
-
-.first-template {
-	width: 70%;
-	margin: 0 auto;
-	padding: 6em 12em;
-	background-color: white;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-		'Open Sans', 'Helvetica Neue', sans-serif;
-
-	h3 {
-		font-size: 1.8rem;
-		color: rgb(63, 108, 253);
-	}
-
-	h4 {
-		font-size: 1.6rem;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	a {
-		color: rgb(63, 108, 253);
-	}
-
-	div,
-	ul {
-		margin-bottom: 20px;
-	}
-
-	&__header {
-		text-transform: capitalize;
-		font-size: 30px;
-		color: rgb(63, 108, 253);
-		text-align: right;
-	}
-
-	&__details,
-	&__social {
-		text-align: right;
-
-		p,
-		a {
-			text-decoration: none;
-		}
-
-		p > span {
-			color: grey;
-		}
-	}
-
-	hr.divider {
-		border: 1px solid rgb(190, 190, 190);
-	}
-
-	&__work {
-		p {
-			margin-bottom: 10px;
-		}
-	}
 }
 
 .second-template {
@@ -337,21 +241,5 @@ input:last-child {
 	li,
 	p {
 		color: #366252;
-	}
-}
-
-input[type="radio"] {
-	display: none;
-}
-
-.active {
-	border: 3px solid blue;
-}
-
-.template {
-	min-width: 1200px;
-	&__form {
-		display: flex;
-		flex-direction: row;
 	}
 }
