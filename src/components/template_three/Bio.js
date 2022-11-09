@@ -5,7 +5,7 @@ function Bio({ firstName, lastName, title, bio }) {
   const lName_initial = lastName.slice(0,1);
 
   return (
-    <div>
+    <section>
       <div className="profile flex row align-center justify-start">
         <h2 className="initials">{`${fName_initial}${lName_initial}`}</h2>
         <div>
@@ -18,7 +18,7 @@ function Bio({ firstName, lastName, title, bio }) {
           {bio}
         </p>
       </div>
-    </div>
+    </section>
   )
 }
 
