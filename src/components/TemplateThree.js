@@ -5,6 +5,7 @@ import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import Bio from "./template_three/Bio";
 import Main from "./template_three/Main";
 import Side from "./template_three/Side";
+import TemplateFooter from "./TemplateFooter"
 
 import {
     faPhone,
@@ -93,9 +94,7 @@ const TemplateThree = ({ resumeData }) => {
                 </div>
 
             </PDFExport>
-            <button className="third-template__button" onClick={exportPDFWithMethod}>
-                SAVE CV AS PDF
-            </button>
+            <TemplateFooter exportPDFWithMethod={exportPDFWithMethod} />
         </div>
     );
 };
