@@ -81,12 +81,3 @@
 .buttons button.next:hover {
   background-color: $primary-semidark;
 }
-
-@media screen and (min-width: 1700px) {
-	:root {
-		font-size: 80%;
-	}
-	section {
-		max-width: 1200px;
-	}
-}

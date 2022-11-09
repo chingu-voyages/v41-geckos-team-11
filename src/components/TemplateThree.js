@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
-import Bio from "./template_three/Bio";
-import Main from "./template_three/Main";
-import Side from "./template_three/Side";
+import Bio from "./template-three/Bio";
+import Main from "./template-three/Main";
+import Side from "./template-three/Side";
 import TemplateFooter from "./TemplateFooter"
 
 import {

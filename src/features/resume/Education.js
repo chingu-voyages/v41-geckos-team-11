@@ -33,7 +33,7 @@ function Education() {
 	};
 	const prevPage = () => {
 		dispatch(changeProgressBar(20));
-		navigate('/');
+		navigate('/resume-builder');
 	};
 
 	return (
