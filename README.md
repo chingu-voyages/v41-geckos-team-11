@@ -3,12 +3,12 @@ Are you tired of creating your CV all over again?
 Look no further! Fill your details in the form and pick the template of your choice and download it. 
 Created by Chris, Roni and Paulina. 
 
-##Tech used:
+## Tech used:
 React, Redux, React Router, SCSS
 
-##Features
+## Features
 1. Landing page
-![Landing page](landingpage.png)
+![Landing page](landing-page.png)
 
 2. Form
 ![About](form1.png)
