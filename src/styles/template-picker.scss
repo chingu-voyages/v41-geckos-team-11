@@ -1,0 +1,50 @@
+.example1 {
+	display: inline-block;
+	width: 400px;
+	height: 460px;
+	background-image: url('../../src/assets/template1.png');
+	background-size: cover;
+	border: 1px solid lightblue;
+}
+
+.example2 {
+	width: 400px;
+	height: 460px;
+	display: inline-block;
+	background-image: url('../../src/assets/design2.png');
+	background-size: cover;
+	border: 1px solid lightblue;
+}
+.example3 {
+	width: 400px;
+	height: 460px;
+	display: inline-block;
+	background-image: url('../../src/assets/template3.png');
+	background-size: cover;
+	border: 1px solid lightblue;
+}
+
+.example4 {
+	width: 400px;
+	height: 460px;
+	display: inline-block;
+	background-size: cover;
+	border: 1px solid lightblue;
+	background-image: url('../../src/assets/design3.png');
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.active {
+	border: 3px solid blue;
+}
+
+.template {
+	min-width: 1200px;
+	&__form {
+		display: flex;
+		flex-direction: row;
+	}
+}
