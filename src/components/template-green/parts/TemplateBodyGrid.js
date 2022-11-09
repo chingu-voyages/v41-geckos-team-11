@@ -19,7 +19,6 @@ const TemplateBodyGrid = () => {
     workDescription2
   } = useSelector(state => state.resume.resumeData);
 
-  console.log(skills, 'here')
   const modifyDate = (date) => {
     const newArr = date.split("-");
     [newArr[0], newArr[1]] = [newArr[1], newArr[0]];
