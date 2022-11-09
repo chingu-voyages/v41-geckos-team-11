@@ -49,10 +49,12 @@ export const resumeSlice = createSlice({
 			state.resumeData.progressBar = action.payload
 		}, 
 		addSkills: (state, action) => {
-			const { id } = action.payload;
-			const skillsFound = state.resumeData.skills.find((skills) => skills.id === id);
-			if (!skillsFound) {
-				state.resumeData.skills.push(action.payload);
+			if (action.payload) {
+				const { id } = action.payload;
+				const skillsFound = state.resumeData.skills.find((skills) => skills.id === id);
+				if (!skillsFound) {
+					state.resumeData.skills.push(action.payload);
+				}
 			}
 		}
 	},
