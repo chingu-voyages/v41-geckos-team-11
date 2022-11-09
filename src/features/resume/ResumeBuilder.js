@@ -18,6 +18,7 @@ const ResumeBuilder = () => {
 	const setSkill = () => {
 		addSkill(text);
 		setText('');
+		document.getElementById('skillInput').value = '';
 	};
 	// Add Skill
 	const addSkill = (text) => {
@@ -91,6 +92,7 @@ const ResumeBuilder = () => {
 								name='skills'
 								placeholder='Input Skills'
 								onChange={(e) => setText(e.target.value)}
+								id='skillInput'
 							/>
 						</div>
 						<div className='input-block'>
