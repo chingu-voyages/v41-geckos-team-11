@@ -339,3 +339,19 @@ input:last-child {
 		color: #366252;
 	}
 }
+
+input[type="radio"] {
+	display: none;
+}
+
+.active {
+	border: 3px solid blue;
+}
+
+.template {
+	min-width: 1200px;
+	&__form {
+		display: flex;
+		flex-direction: row;
+	}
+}
