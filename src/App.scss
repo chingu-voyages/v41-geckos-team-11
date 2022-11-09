@@ -133,7 +133,9 @@ section {
 	display: inline-block;
 	width: 400px;
 	height: 460px;
-	background-color: white;
+	background-image: url('../src/assets/template1.png');
+	background-size: cover;
+	border: 1px solid lightblue;
 }
 
 .example2 {
@@ -168,7 +170,6 @@ input:last-child {
 
 .first-template {
 	width: 70%;
-	height: 1500px;
 	margin: 0 auto;
 	padding: 6em 12em;
 	background-color: white;
@@ -326,14 +327,15 @@ input:last-child {
 
 .template-green {
 	margin: 0 10rem;
-    padding: 11rem;
+	padding: 11rem;
 	border: 3rem solid #366252;
 	background: #faf5ea;
 	min-height: 800px;
 
-	h1, h3, li, p{
+	h1,
+	h3,
+	li,
+	p {
 		color: #366252;
-
 	}
-	
 }
