@@ -3,6 +3,7 @@ import React from 'react';
 import TemplateOne from '../../components/TemplateOne';
 import TemplateBlue from '../../components/TemplateBlue';
 import TemplateThree from '../../components/TemplateThree';
+import TemplateGreen from '../../components/template-green/Main';
 import '../../App.css';
 
 const FinalView = () => {
@@ -26,6 +27,12 @@ const FinalView = () => {
 		return (
 			<div className="wrapper">
 				<TemplateThree pickedTemplate={pickedTemplate} resumeData={resumeData} />
+			</div>
+		)
+	} else if (pickedTemplate === `fourth-template`) {
+		return (
+			<div className="wrapper">
+				<TemplateGreen pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			</div>
 		)
 	} else {
