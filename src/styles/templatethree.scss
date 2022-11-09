@@ -93,16 +93,4 @@
       list-style: none;
     }
   }
-  button {
-    border: none;
-    padding: 2rem 4rem;
-    background-color: $primary-main;
-    color: #f3f3f3;
-    margin: 2rem auto;
-    display: block;
-    transition: all .3s;
-    &:hover{
-        background-color: $primary-semidark;
-    }
-  }
 }
