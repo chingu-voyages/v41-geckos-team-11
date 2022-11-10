@@ -5,7 +5,7 @@ import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import Bio from "../template-color/Bio"
 import Main from "../template-color/Main";
 import Side from "../template-color/Side";
-import TemplateFooter from "../TemplateFooter"
+import TemplateFooter from "../../components/TemplateFooter";
 
 import {
     faPhone,
@@ -43,7 +43,6 @@ const TemplateColor = ({ resumeData }) => {
         workDescription1,
         jobTitle1
     } = resumeData;
-    console.log(skills);
 
     const modifyDate = (date) => {
         const newArr = date.split("-");
