@@ -5,9 +5,8 @@
 @import './styles/header';
 @import './styles/templatethree';
 @import './styles/template-green';
-@import './styles/template-picker';
-
-@import './styles/landing-page.scss';
+@import '../src/routes/TemplatePicker/template-picker.scss';
+@import '../src/routes/LandingPage/landing-page.scss';
 
 // @import "~react-datepicker/dist/react-datepicker.css";
 

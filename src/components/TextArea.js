@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Fragment, useState, useEffect } from "react";
-import { setResume } from "../features/resume/resumeSlice";
+import { setResume } from "../reducers/resumeSlice";
 
 const TextArea = ({name}) => {
     const dispatch = useDispatch();

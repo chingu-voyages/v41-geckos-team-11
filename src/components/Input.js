@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setResume } from "../features/resume/resumeSlice";
+import { setResume } from "../reducers/resumeSlice";
 
 const Input = (props) => {
     const {name, text, type="text", placeholder=""} = props;

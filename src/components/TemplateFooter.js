@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { changeProgressBar } from "../features/resume/resumeSlice";
+import { changeProgressBar } from "../reducers/resumeSlice";
 
 const TemplateFooter = ({exportPDFWithMethod}) => {
     const navigate = useNavigate();
