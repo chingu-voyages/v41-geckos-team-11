@@ -4,8 +4,8 @@
 @import './styles/prestyles';
 @import './styles/header';
 @import './styles/resumeform';
-@import './styles/templatethree';
-@import './styles/template-green';
+@import '../src/components/template-color/template-color.scss';
+@import '../src/components/template-green/template-green.scss';
 @import '../src/routes/TemplatePicker/template-picker.scss';
 @import '../src/routes/LandingPage/landing-page.scss';
 
