@@ -2,9 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
-import Bio from "./Bio";
-import Main from "./Main";
-import Side from "./Side";
+import Bio from "../template-color/Bio"
+import Main from "../template-color/Main";
+import Side from "../template-color/Side";
+import TemplateFooter from "../TemplateFooter"
 
 import {
     faPhone,
@@ -14,7 +15,7 @@ import {
 
 library.add(faPhone, faGraduationCap, faBriefcase);
 
-const TemplateThree = ({ resumeData }) => {
+const TemplateColor = ({ resumeData }) => {
     const pdfExportComponent = React.useRef(null);
     const exportPDFWithMethod = () => {
         if (pdfExportComponent.current) {
@@ -93,11 +94,9 @@ const TemplateThree = ({ resumeData }) => {
                 </div>
 
             </PDFExport>
-            <button className="third-template__button" onClick={exportPDFWithMethod}>
-                SAVE CV AS PDF
-            </button>
+            <TemplateFooter exportPDFWithMethod={exportPDFWithMethod} />
         </div>
     );
 };
 
-export default TemplateThree;
+export default TemplateColor;
