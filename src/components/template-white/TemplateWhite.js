@@ -67,7 +67,7 @@ function TemplateOne({ resumeData }) {
 						<p className='first-template__bio'>{bio}</p>
 					</div>
 					<h3 className='first-template__title'>Skills</h3>
-					<hr class='divider' />
+					<hr className='divider' />
 					<ul className='first-template__skills'>
 						{skills.map((skill) => (
 							<li key={skill.id}>
@@ -82,20 +82,24 @@ function TemplateOne({ resumeData }) {
 							{company}, {jobTitle1}, {startWorkDate1} to {endWorkDate1}
 						</h4>
 						<p>{workDescription1}</p>
-						<h4>
-							{company2}, {jobTitle2}, {startWorkDate2} to {endWorkDate2}
-						</h4>
-						<p>{workDescription2}</p>
+						{company2 && (
+							<>
+								<h4>
+									{company2}, {jobTitle2}, {startWorkDate2} to {endWorkDate2}
+								</h4>
+								<p>{workDescription2}</p>
+							</>
+						)}
 					</div>
 					<h3 className='first-template__title'>Education</h3>
 					<hr className='divider' />
 					<ul className='first-template__edu'>
 						{education.map((el) => (
-							<li>
-								<h4>{el.degree}</h4>
-								<p>
-									{el.university}, {el.course}, {el.location}
-								</p>
+							<li key={el.id}>
+								<h4>
+									{el.degree}, {el.university}, {el.course}, {el.schoolLocation},{' '}
+									{el.educationStartDate} to {el.educationEndDate}
+								</h4>
 							</li>
 						))}
 					</ul>

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import DatePicker from "react-datepicker";
-// import Input from "../../components/Input";
+import Input from '../../components/Input';
 
 import { changeProgressBar, changeEducation } from '../../reducers/resumeSlice';
 
@@ -13,8 +12,8 @@ function Education() {
 		degree: '',
 		course: '',
 		schoolLocation: '',
-		// startSchoolDate1: '',
-        // endSchoolDate1: '',
+		educationStartDate: '',
+		educationEndDate: '',
 	});
 
 	const navigate = useNavigate();
@@ -61,6 +60,24 @@ function Education() {
 							<div className='input-block'>
 								<label htmlFor='course'>Course</label>
 								<input onChange={handleEducationChange} id='course' name='course' />
+							</div>
+						</div>
+						<div className='row flex align-center justify-between full-width'>
+							<div className='input-block'>
+								<input
+									text='Start Date'
+									type='month'
+									name='educationStartDate'
+									onChange={handleEducationChange}
+								/>
+							</div>
+							<div className='input-block'>
+								<input
+									text='End Date'
+									type='month'
+									name='educationEndDate'
+									onChange={handleEducationChange}
+								/>
 							</div>
 						</div>
 					</div>
