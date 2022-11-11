@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { pickTemplate, changeProgressBar } from "./resumeSlice";
+import { pickTemplate, changeProgressBar } from "../../reducers/resumeSlice";
 import "../../App.css";
 import { useState } from "react";
 

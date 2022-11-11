@@ -9,9 +9,9 @@ import Skills from "../../components/Skills";
 import {
   changeProgressBar,
   addSkills
-} from "./resumeSlice";
+} from "../../reducers/resumeSlice";
 
-const ResumeBuilder = () => {
+const PersonalInfo = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
@@ -109,4 +109,4 @@ const ResumeBuilder = () => {
 	);
 };
 
-export default ResumeBuilder;
+export default PersonalInfo;

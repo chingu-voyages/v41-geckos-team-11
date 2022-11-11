@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import DatePicker from "react-datepicker";
 // import Input from "../../components/Input";
 
-import { changeProgressBar, changeEducation } from './resumeSlice';
+import { changeProgressBar, changeEducation } from '../../reducers/resumeSlice';
 
 function Education() {
 	const [education, setEducation] = useState({

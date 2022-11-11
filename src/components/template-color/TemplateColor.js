@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
-import Bio from "./template-three/Bio";
-import Main from "./template-three/Main";
-import Side from "./template-three/Side";
-import TemplateFooter from "./TemplateFooter"
+import Bio from "../template-color/Bio"
+import Main from "../template-color/Main";
+import Side from "../template-color/Side";
+import TemplateFooter from "../../components/TemplateFooter";
 
 import {
     faPhone,
@@ -15,7 +15,7 @@ import {
 
 library.add(faPhone, faGraduationCap, faBriefcase);
 
-const TemplateThree = ({ resumeData }) => {
+const TemplateColor = ({ resumeData }) => {
     const pdfExportComponent = React.useRef(null);
     const exportPDFWithMethod = () => {
         if (pdfExportComponent.current) {
@@ -43,7 +43,6 @@ const TemplateThree = ({ resumeData }) => {
         workDescription1,
         jobTitle1
     } = resumeData;
-    console.log(skills);
 
     const modifyDate = (date) => {
         const newArr = date.split("-");
@@ -99,4 +98,4 @@ const TemplateThree = ({ resumeData }) => {
     );
 };
 
-export default TemplateThree;
+export default TemplateColor;

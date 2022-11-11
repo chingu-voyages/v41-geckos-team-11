@@ -1,4 +1,4 @@
-import TemplateFooter from './TemplateFooter';
+import TemplateFooter from '../TemplateFooter';
 
 function TemplateOne({ resumeData }) {
 	const {

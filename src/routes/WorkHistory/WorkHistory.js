@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import TextArea from '../../components/TextArea';
 import Input from '../../components/Input';
 
-import { changeProgressBar } from './resumeSlice';
+import { changeProgressBar } from '../../reducers/resumeSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 

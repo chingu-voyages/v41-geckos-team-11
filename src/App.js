@@ -1,14 +1,14 @@
 // import './styles/theme.scss';
 // import './styles/header.scss';
 import './App.scss';
-import LandingPage from './components/LandingPage';
-import ResumeBuilder from './features/resume/ResumeBuilder';
-import Education from './features/resume/Education';
-import WorkHistory from './features/resume/WorkHistory';
-import TemplatePicker from './features/resume/TemplatePicker';
+import LandingPage from './routes/LandingPage/LandingPage';
+import PersonalInfo from './routes/PersonalInfo/PersonalInfo';
+import Education from './routes/Education/Education';
+import WorkHistory from './routes/WorkHistory/WorkHistory';
+import TemplatePicker from './routes/TemplatePicker/TemplatePicker';
 import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import FinalView from './features/resume/FinalView';
+import FinalView from './routes/FinalView/FinalView';
 
 function App() {
 	return (
@@ -17,7 +17,7 @@ function App() {
 			<main>
 				<Routes>
 					<Route exact path='/' element={<LandingPage />} />
-					<Route exact path='/resume-builder' element={<ResumeBuilder />} />
+					<Route exact path='/resume-builder' element={<PersonalInfo />} />
 					<Route exact path='/education' element={<Education />} />
 					<Route exact path='/work-history' element={<WorkHistory />} />
 					<Route path='/template' element={<TemplatePicker />} />

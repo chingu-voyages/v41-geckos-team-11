@@ -1,8 +1,7 @@
 import { useSelector } from 'react-redux';
 import React from 'react';
-import TemplateOne from '../../components/TemplateOne';
-import TemplateBlue from '../../components/TemplateBlue';
-import TemplateThree from '../../components/TemplateThree';
+import TemplateWhite from '../../components/template-white/TemplateWhite';
+import TemplateColor from '../../components/template-color/TemplateColor';
 import TemplateGreen from '../../components/template-green/Main';
 import '../../App.css';
 
@@ -14,25 +13,19 @@ const FinalView = () => {
 	if (pickedTemplate === `first-template`) {
 		return (
 			<div className="wrapper">
-				<TemplateOne pickedTemplate={pickedTemplate} resumeData={resumeData} />
-			</div>
-		)
-	} else if (pickedTemplate === `second-template`) {
-		return (
-			<div className="wrapper">
-				<TemplateBlue pickedTemplate={pickedTemplate} resumeData={resumeData} />
+				<TemplateWhite pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			</div>
 		)
 	} else if (pickedTemplate === `third-template`) {
 		return (
 			<div className="wrapper">
-				<TemplateThree pickedTemplate={pickedTemplate} resumeData={resumeData} />
+				<TemplateColor pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			</div>
 		)
 	} else if (pickedTemplate === `fourth-template`) {
 		return (
 			<div className="wrapper">
-				<TemplateGreen pickedTemplate={pickedTemplate} resumeData={resumeData} />
+				<TemplateGreen pickedTemplate={pickedTemplate} />
 			</div>
 		)
 	} else {
