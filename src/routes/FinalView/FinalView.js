@@ -9,29 +9,30 @@ const FinalView = () => {
 	const resumeData = useSelector((state) => state.resume.resumeData);
 	const pickedTemplate = useSelector((state) => state.resume.template);
 
-
 	if (pickedTemplate === `first-template`) {
 		return (
-			<div className="wrapper">
+			<div className='wrapper'>
 				<TemplateWhite pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			</div>
-		)
+		);
 	} else if (pickedTemplate === `third-template`) {
 		return (
-			<div className="wrapper">
+			<div className='wrapper'>
 				<TemplateColor pickedTemplate={pickedTemplate} resumeData={resumeData} />
 			</div>
-		)
+		);
 	} else if (pickedTemplate === `fourth-template`) {
 		return (
-			<div className="wrapper">
+			<div className='wrapper'>
 				<TemplateGreen pickedTemplate={pickedTemplate} />
 			</div>
-		)
+		);
 	} else {
 		return (
-			<a href="/" className="redirect">Click to Fill Form</a>
-		)
+			<a href='/' className='redirect'>
+				Click to Fill Form
+			</a>
+		);
 	}
 };
 

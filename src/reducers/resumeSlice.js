@@ -19,15 +19,17 @@ export const resumeSlice = createSlice({
 			phone: '',
 			company: '',
 			company2: '',
-			startWorkDate1: '', 
+			startWorkDate1: '',
 			endWorkDate1: '',
 			jobTitle1: '',
 			workDescription1: '',
-			startWorkDate2: '', 
+			startWorkDate2: '',
+			educationStartDate: '',
+			educationEndDate: '',
 			endWorkDate2: '',
 			jobTitle2: '',
 			workDescription2: '',
-			progressBar: 20
+			progressBar: 20,
 		},
 		template: '',
 	},
@@ -43,11 +45,11 @@ export const resumeSlice = createSlice({
 			state.template = action.payload;
 		},
 		setResume: (state, action) => {
-			state.resumeData[action.payload.name] = action.payload.inputVal
-		}, 
+			state.resumeData[action.payload.name] = action.payload.inputVal;
+		},
 		changeProgressBar: (state, action) => {
-			state.resumeData.progressBar = action.payload
-		}, 
+			state.resumeData.progressBar = action.payload;
+		},
 		addSkills: (state, action) => {
 			if (action.payload) {
 				const { id } = action.payload;
@@ -56,15 +58,10 @@ export const resumeSlice = createSlice({
 					state.resumeData.skills.push(action.payload);
 				}
 			}
-		}
+		},
 	},
 });
 
-export const {
-	changeEducation,
-	pickTemplate,
-	setResume,
-	addSkills,
-	changeProgressBar
-} = resumeSlice.actions;
+export const { changeEducation, pickTemplate, setResume, addSkills, changeProgressBar } =
+	resumeSlice.actions;
 export default resumeSlice.reducer;
